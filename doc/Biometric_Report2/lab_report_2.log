@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  27 OCT 2015 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  31 OCT 2015 09:44
 entering extended mode
-**lab_report_1.tex
-(lab_report_1.tex
+**lab_report_2.tex
+(lab_report_2.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -661,7 +661,7 @@ Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
 \c@subfigure=\count202
 \c@subtable=\count203
 )
-(lab_report_1.aux)
+No file lab_report_2.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
@@ -679,7 +679,7 @@ LaTeX Font Info:    ... okay on input line 55.
 . 
 . Activating mapping `default' on line 55.
 .................................................
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count204
 \scratchdimen=\dimen182
@@ -707,17 +707,38 @@ Package caption Info: End \AtBeginDocument code.
 Missing character: There is no Å in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 
+
+LaTeX Warning: Citation `tresholding_def' on page 1 undefined on input line 93.
+
+
+
+LaTeX Warning: Citation `image_histogram_def' on page 1 undefined on input line
+ 96.
+
+
+LaTeX Warning: Citation `histogram_normalization_def' on page 1 undefined on in
+put line 98.
+
 [1
 
 {C:/Users/dybisz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
+LaTeX Warning: Reference `eq:1' on page 2 undefined on input line 112.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+
+
+LaTeX Warning: Reference `eq:1' on page 2 undefined on input line 114.
+
+
+LaTeX Warning: Citation `brightness_def1' on page 2 undefined on input line 119
+.
 
 <_Figures/sample_1.jpg, id=11, 501.875pt x 288.07625pt>
 File: _Figures/sample_1.jpg Graphic file (type jpg)
@@ -747,6 +768,10 @@ Package pdftex.def Info: _Figures/sample_4.png used on input line 159.
 (pdftex.def)             Requested size: 167.32521pt x 167.32784pt.
  [2] [3 <./_Figures/sample_1.jpg> <./_Figures/sample_2.jpg> <./_Figures/sample_
 3.jpg> <./_Figures/sample_4.png>]
+
+LaTeX Warning: Reference `fig:class_diag' on page 4 undefined on input line 181
+.
+
 <_Figures/class_diagram_2.png, id=26, 632.3625pt x 563.85657pt>
 File: _Figures/class_diagram_2.png Graphic file (type png)
 
@@ -761,7 +786,16 @@ File: _Figures/treshold_function.jpg Graphic file (type jpg)
 Package pdftex.def Info: _Figures/treshold_function.jpg used on input line 197.
 
 (pdftex.def)             Requested size: 327.74895pt x 313.45906pt.
- [4 <./_Figures/class_diagram_2.png>]
+
+
+LaTeX Warning: Reference `fig:not_grayscale' on page 4 undefined on input line 
+198.
+
+
+LaTeX Warning: Reference `fig:not_grayscale' on page 4 undefined on input line 
+198.
+
+[4 <./_Figures/class_diagram_2.png>]
 <_Figures/notGrayscale.jpg, id=31, 335.75438pt x 121.20282pt>
 File: _Figures/notGrayscale.jpg Graphic file (type jpg)
 
@@ -775,7 +809,14 @@ File: _Figures/treshold_check.png Graphic file (type png)
 <use _Figures/treshold_check.png>
 Package pdftex.def Info: _Figures/treshold_check.png used on input line 211.
 (pdftex.def)             Requested size: 241.49895pt x 228.20767pt.
- [5 <./_Figures/treshold_function.jpg> <./_Figures/notGrayscale.jpg>]
+
+
+LaTeX Warning: Reference `definitions' on page 5 undefined on input line 212.
+
+
+LaTeX Warning: Reference `definitions' on page 5 undefined on input line 212.
+
+[5 <./_Figures/treshold_function.jpg> <./_Figures/notGrayscale.jpg>]
 <_Figures/normalization_function.jpg, id=36, 459.21562pt x 158.09062pt>
 File: _Figures/normalization_function.jpg Graphic file (type jpg)
 
@@ -800,6 +841,12 @@ Package pdftex.def Info: _Figures/normalization_process.jpg used on input line
 233.
 (pdftex.def)             Requested size: 345.0pt x 250.59882pt.
 
+
+LaTeX Warning: Reference `definitions' on page 7 undefined on input line 234.
+
+
+LaTeX Warning: Reference `definitions' on page 7 undefined on input line 234.
+
 <_Figures/brigthness_function.jpg, id=42, 449.42906pt x 298.86656pt>
 File: _Figures/brigthness_function.jpg Graphic file (type jpg)
 
@@ -816,9 +863,50 @@ File: _Figures/brighthness_clamp.jpg Graphic file (type jpg)
 Package pdftex.def Info: _Figures/brighthness_clamp.jpg used on input line 248.
 
 (pdftex.def)             Requested size: 345.0pt x 116.39717pt.
- [8 <./_Figures/brigthness_function.jpg> <./_Figures/brighthness_clamp.jpg>]
+
+
+LaTeX Warning: Reference `fig:tresh_raw_1' on page 8 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `fig:tresh_good_1' on page 8 undefined on input line 2
+61.
+
+
+LaTeX Warning: Reference `fig:tresh_bad_1' on page 8 undefined on input line 26
+1.
+
+
+LaTeX Warning: Reference `fig:tresh_raw_2' on page 8 undefined on input line 26
+4.
+
+
+LaTeX Warning: Reference `fig:tresh_bad_2' on page 8 undefined on input line 26
+4.
+
+[8 <./_Figures/brigthness_function.jpg> <./_Figures/brighthness_clamp.jpg>]
+
+LaTeX Warning: Reference `fig:tresh_raw_3' on page 9 undefined on input line 26
+6.
+
+
+LaTeX Warning: Reference `fig:tresh_bad_3' on page 9 undefined on input line 26
+6.
+
+
+LaTeX Warning: Reference `fig:tresh_raw_1' on page 9 undefined on input line 26
+8.
+
+
+LaTeX Warning: Reference `fig:tresh_good_4' on page 9 undefined on input line 2
+68.
+
+
+LaTeX Warning: Reference `fig:tresh_bad_4' on page 9 undefined on input line 26
+8.
+
 File: _Figures/sample_1.jpg Graphic file (type jpg)
- <use _Figures/sample_1.jpg>
+<use _Figures/sample_1.jpg>
 Package pdftex.def Info: _Figures/sample_1.jpg used on input line 276.
 (pdftex.def)             Requested size: 100.39613pt x 57.62741pt.
 
@@ -897,13 +985,85 @@ File: _Figures/sample_4_bad_tresholding.png Graphic file (type png)
 Package pdftex.def Info: _Figures/sample_4_bad_tresholding.png used on input li
 ne 345.
 (pdftex.def)             Requested size: 100.39613pt x 100.39827pt.
- [9 <./_Figures/sample_1_good_treshold.png> <./_Figures/sample_1_bad_treshold.p
-ng> <./_Figures/sample_2_good_treshold.png> <./_Figures/sample_2_bad_treshold.p
-ng> <./_Figures/sample_3_good_treshold.png> <./_Figures/sample_3_bad_treshold.p
-ng> <./_Figures/sample_4_good_treshold.png> <./_Figures/sample_4_bad_tresholdin
-g.png>]
+
+
+LaTeX Warning: Reference `fig:histogram_results' on page 9 undefined on input l
+ine 358.
+
+
+LaTeX Warning: Reference `fig:raw_hist_1' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:raw_hist_2' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:raw_hist_3' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:raw_hist_4' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:average_hist_1' on page 9 undefined on input line
+ 358.
+
+
+LaTeX Warning: Reference `fig:average_hist_2' on page 9 undefined on input line
+ 358.
+
+
+LaTeX Warning: Reference `fig:average_hist_3' on page 9 undefined on input line
+ 358.
+
+
+LaTeX Warning: Reference `fig:average_hist_4' on page 9 undefined on input line
+ 358.
+
+
+LaTeX Warning: Reference `fig:per_hist_1' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:per_hist_2' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:per_hist_3' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `fig:per_hist_4' on page 9 undefined on input line 358
+.
+
+
+LaTeX Warning: Reference `definitions' on page 9 undefined on input line 358.
+
+[9 <./_Figures/sample_1_good_treshold.png> <./_Figures/sample_1_bad_treshold.pn
+g> <./_Figures/sample_2_good_treshold.png> <./_Figures/sample_2_bad_treshold.pn
+g> <./_Figures/sample_3_good_treshold.png> <./_Figures/sample_3_bad_treshold.pn
+g> <./_Figures/sample_4_good_treshold.png> <./_Figures/sample_4_bad_tresholding
+.png>]
+
+LaTeX Warning: Reference `fig:average_hist_1' on page 10 undefined on input lin
+e 360.
+
+
+LaTeX Warning: Reference `fig:raw_hist_4' on page 10 undefined on input line 36
+0.
+
+
+LaTeX Warning: Reference `fig:average_hist_4' on page 10 undefined on input lin
+e 360.
+
+
+LaTeX Warning: Reference `fig:per_hist_4' on page 10 undefined on input line 36
+0.
+
 File: _Figures/sample_1.jpg Graphic file (type jpg)
- <use _Figures/sample_1.jpg>
+<use _Figures/sample_1.jpg>
 Package pdftex.def Info: _Figures/sample_1.jpg used on input line 367.
 (pdftex.def)             Requested size: 100.39613pt x 57.62741pt.
 
@@ -985,15 +1145,51 @@ File: _Figures/sample_4_normalization_per_channel.png Graphic file (type png)
 Package pdftex.def Info: _Figures/sample_4_normalization_per_channel.png used o
 n input line 437.
 (pdftex.def)             Requested size: 100.39613pt x 100.39827pt.
- [10 <./_Figures/sample_1_normalization_average.png> <./_Figures/sample_1_norma
-lization_per_channel.png> <./_Figures/sample_2_normalization_average.png> <./_F
-igures/sample_2_normalization_per_channel.png> <./_Figures/sample_3_normalizati
-on_average.png> <./_Figures/sample_3_normalization_per_channel.png> <./_Figures
-/sample_4_normalization_average.png> <./_Figures/sample_4_normalization_per_cha
-nnel.png>]
-File: _Figures/sample_1.jpg Graphic file (type jpg)
 
-<use _Figures/sample_1.jpg>
+
+LaTeX Warning: Reference `fig:brigth_low_1' on page 10 undefined on input line 
+451.
+
+
+LaTeX Warning: Reference `fig:brigth_low_2' on page 10 undefined on input line 
+451.
+
+
+LaTeX Warning: Reference `fig:brigth_low_3' on page 10 undefined on input line 
+451.
+
+
+LaTeX Warning: Reference `fig:brigth_low_4' on page 10 undefined on input line 
+451.
+
+
+LaTeX Warning: Reference `fig:brigth_high_1' on page 10 undefined on input line
+ 451.
+
+
+LaTeX Warning: Reference `fig:brigth_high_2' on page 10 undefined on input line
+ 451.
+
+
+LaTeX Warning: Reference `fig:brigth_high_3' on page 10 undefined on input line
+ 451.
+
+
+LaTeX Warning: Reference `fig:brigth_high_4' on page 10 undefined on input line
+ 451.
+
+
+LaTeX Warning: Reference `fig:brigth_high_4' on page 10 undefined on input line
+ 451.
+
+[10 <./_Figures/sample_1_normalization_average.png> <./_Figures/sample_1_normal
+ization_per_channel.png> <./_Figures/sample_2_normalization_average.png> <./_Fi
+gures/sample_2_normalization_per_channel.png> <./_Figures/sample_3_normalizatio
+n_average.png> <./_Figures/sample_3_normalization_per_channel.png> <./_Figures/
+sample_4_normalization_average.png> <./_Figures/sample_4_normalization_per_chan
+nel.png>]
+File: _Figures/sample_1.jpg Graphic file (type jpg)
+ <use _Figures/sample_1.jpg>
 Package pdftex.def Info: _Figures/sample_1.jpg used on input line 457.
 (pdftex.def)             Requested size: 100.39613pt x 57.62741pt.
 
@@ -1072,35 +1268,51 @@ File: _Figures/sample_4_brigthness_high.png Graphic file (type png)
 Package pdftex.def Info: _Figures/sample_4_brigthness_high.png used on input li
 ne 527.
 (pdftex.def)             Requested size: 100.39613pt x 100.39827pt.
- [11 <./_Figures/sample_1_brightness_low.png> <./_Figures/sample_1_brightness_h
-igh.png> <./_Figures/sample_2_brigthness_low.png> <./_Figures/sample_2_brigthne
-ss_high.png> <./_Figures/sample_3_brigthness_low.png> <./_Figures/sample_3_brig
-thness_high.png> <./_Figures/sample_4_brigthness_low.png> <./_Figures/sample_4_
-brigthness_high.png>]
+
+
+LaTeX Warning: Reference `fig:sample_2' on page 11 undefined on input line 537.
+
+
+
+LaTeX Warning: Reference `fig:sample_3' on page 11 undefined on input line 537.
+
+
+[11 <./_Figures/sample_1_brightness_low.png> <./_Figures/sample_1_brightness_hi
+gh.png> <./_Figures/sample_2_brigthness_low.png> <./_Figures/sample_2_brigthnes
+s_high.png> <./_Figures/sample_3_brigthness_low.png> <./_Figures/sample_3_brigt
+hness_high.png> <./_Figures/sample_4_brigthness_low.png> <./_Figures/sample_4_b
+rigthness_high.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 547--548
 []$\OT1/cmr/m/n/10 http : / / olympusmicro . com / primer / java / olympusmicd 
 / digitalimaging /$
  []
 
-[12] (lab_report_1.aux) ) 
+[12] (lab_report_2.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15580 strings out of 493673
- 320779 string characters out of 3143957
- 341213 words of memory out of 3000000
+ 15578 strings out of 493673
+ 320747 string characters out of 3143957
+ 340376 words of memory out of 3000000
  18771 multiletter control sequences out of 15000+200000
  12444 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  53i,8n,92p,10440b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb>
-Output written on lab_report_1.pdf (12 pages, 13598009 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb>
+Output written on lab_report_2.pdf (12 pages, 13597613 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
