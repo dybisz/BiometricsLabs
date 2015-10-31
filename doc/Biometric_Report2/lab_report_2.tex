@@ -34,10 +34,17 @@
 \usepackage[export]{adjustbox}
 \usepackage[usenames, dvipsnames]{color} % to color some important remarks
 \usepackage{caption}
+\usepackage{wrapfig}
 \usepackage{subcaption}
 \urlstyle{same}  % (for bibliography links
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
+%\usepackage{array}
 
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}\equiv{}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
+  
+ \usepackage{amsfonts} 
 \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
 
 %\usepackage{times} % Uncomment to use the Times New Roman font
@@ -93,7 +100,102 @@ Instructor: & mgr Piotr Panasiuk % Instructor/supervisor
 
 \begin{description}
 \item[Convolution]
+A convolution is an integral that expresses the amount of overlap of one function g as it is shifted over another function f. It therefore "blends" one function with another  \cite{convolution_wolphram}. 
+
+In other words, convolution gives the area overlap between the two functions as a function of the amount that one of the original functions is translated \cite{convolution_wiki}.
+
+Formally, for functions $f(x)$ and $g(x)$ of a continuous variable x, convolution is defined as:
+\begin{equation} \label{conv_one_var_cont}
+f(x) * g(x) = \int_{-\infty}^{\infty} f(\tau) \cdot g(x - \tau) d\tau
+\end{equation}
+, where $*$ means convolution operation, $\cdot$ represents common multiplication and $\tau$ is a "shifting variable".
+
+Equation \ref{conv_one_var_cont} can be easily transformed to discrete form as follows:
+\begin{equation} \label{conv_one_var_disc}
+f[x] * g[x] = \sum_{k=-\infty}^{\infty} f[k] \cdot g[x-k]
+\end{equation}
+This form will be of particular interest for us, since it can be (more or less) directly applied to an image as showed in the next subsection.
+
 \item[Convolution Filters]
+As mentioned, one can ad hoc transform equation \ref{conv_one_var_disc} into two variable case:
+\begin{equation} \label{two_var_conv_one_var_disc}
+f[x,y] * g[x,y] =\sum_{n_{1}=-\infty}^{\infty} \sum_{n_{2}=-\infty}^{\infty} f[n_{1}, n_{2}] \cdot g[x-n_{1}, y - n_{2}]
+\end{equation}
+, but for our purposes (as explained in a moment) we will use a slightly modified version of equation \ref{two_var_conv_one_var_disc}, namely:
+\begin{equation} \label{final_two_var_conv_one_var_disc}
+f[x,y] * g[x,y] =\sum_{n_{1}=k_{1}}^{k_{2}} \sum_{n_{2}=k_{3}}^{k_{4}} f[n_{1}, n_{2}] \cdot g[x+n_{1}, y + n_{2}]
+\end{equation}
+,where:
+\begin{conditions} 
+  n_{1}, n_{2} \in \mathbb{N}& auxiliary shifting variables\\
+  k_{1}, k_{2}, k_{3}, k_{4} \in \mathbb{N}& size restriction to convolution matrix (kernel)\\
+ (x,y) \in \mathbb{N}^{2}     &  pixel of interest's position on an image in XY coordinates \\   
+ f[x,y] : \mathbb{N}^{2} \rightarrow \mathbb{N} &  convolution matrix (kernel) \\
+ g[x,y] : \mathbb{N}^{2} \rightarrow \mathbb{N} & an image as a matrix of pixels values
+\end{conditions}
+
+Equation \ref{two_var_conv_one_var_disc} has been changed due to obsolete $g[x-k]$ notation of equation \ref{conv_one_var_disc}. In this way we can omit left-right flipping when calculating consecutive pixels.
+
+In addition, we restrict $g[x,y]$ by $k$'s variables, because we want our convolution matrix to be finite. 
+In this case we can think of $f[x,y]$ as a frame, which we move over some pixel $(x,y)$ of an image $g[x,y]$. Then by applying equation \ref{final_two_var_conv_one_var_disc} we sum all values of $g$ over
+$ \langle x + k_1; x+ k_2 \rangle \cup \langle y + k_3 ; y + k_4 \rangle$ interval multiplied by appropriate values of $f$. 
+
+As an example let us assume that:
+\begin{conditions} 
+  g[x,y] : \langle 1; 5 \rangle \cup \langle 1 ; 7 \rangle \rightarrow \mathbb{N} & some very small image\\
+  f[x,y] : \langle -1; 1 \rangle \cup \langle -1 ; 1 \rangle \rightarrow \mathbb{N} & kernel matrix
+\end{conditions}
+
+In such a case we can present both of them in form of matrices of some natural values. Let us assume that figure \ref{fig:example_repr} defines $f[x,y]$ and $g[x,y]$ in terms of matrices.
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{_Figures/example_11.jpg}
+  \caption{}
+  \label{fig:example_repr}
+\end{subfigure}%
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{_Figures/example_12.jpg}
+  \caption{}
+  \label{fig:example_43}
+\end{subfigure}%
+\caption{}
+\label{fig:results_tresh}
+\end{figure}
+
+Now we want to apply convolution for let us say pixel $(4,3)$. Figure \ref{fig:example_43} represents region of interest. Equation \ref{final_two_var_conv_one_var_disc} for this case takes following form:
+\begin{equation} 
+\begin{split}
+f[4,3] * g[4,3] =\sum_{n_{1}=-1}^{1} \sum_{n_{2}=-1}^{1} f[n_{1}, n_{2}] \cdot g[4+n_{1}, 3 + n_{2}] \\
+= f[-1, -1] \cdot g[3, 2] + f[-1, 0] \cdot g[3, 3] + f[-1, 1] \cdot g[3, 4] \\
++ f[0, -1] \cdot g[3, 2] + f[0, 0] \cdot g[3, 3] + f[0, 1] \cdot g[0, 4] \\
++ f[1, -1] \cdot g[3, 2] + f[1, 0] \cdot g[3, 3] + f[1, 1] \cdot g[0, 4] \\
+= 3 * 5 + 1 * 1 + 0 * 3 \\
++ 6 * 8 + 2 * 4 + 5 * 2 \\
++ 3 * 9 + 7 * 8 + 8 * 5 \\
+= 205
+\end{split}
+\end{equation}
+
+In this way pixel of output image, positioned at $(4,3)$ will have value $205$. When we apply convolution to all pixels in $g$ we will get an output (filtered) image.
+
+\begin{figure}
+\noindent
+\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+	\includegraphics[width=\linewidth]{_Figures/conv_filter_border.jpg} 
+	\caption{}
+	\label{fig:caution}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.6\textwidth}\raggedleft
+\textcolor{red}{Caution:} Border cases i.e. cases when there is no corresponding $g[x,y]$ value for some value of $f[x,y]$ (see figure \ref{fig:caution} for reference), will be treated as special ones. In such a case pixel of interest will keep its value from $g$ function.
+\end{minipage}
+\end{figure}
+
+For the rest of the paper we will use only $3 \times 3$ kernel matrices, hence $k_1 = k_3 = -1$ and $k_2 = k_4 = 1$.
+
 \item[High Pass Filter]
 \item[Low Pass Filter]
 \item[Gaussian Filter]
@@ -109,38 +211,6 @@ Instructor: & mgr Piotr Panasiuk % Instructor/supervisor
 %----------------------------------------------------------------------------------------
 
 \section{Experimental Data}
-Since laboratory concerned processing of images, it is not a surprise that our data were images. Although during session we check algorithms only for one picture, I'll demonstrate results on 3 additional ones to enrich this report. 
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1.jpg}
-  \caption{}
-  \label{fig:sample_1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2.jpg}
-    \caption{}
-  \label{fig:sample_2}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3.jpg}
-  \caption{}
-  \label{fig:sample_3}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4.png}
-    \caption{}
-  \label{fig:sample_4}
-\end{subfigure}
-\caption{Images used to check implemented algorithms.}
-\label{fig:double_samples}
-\end{figure}
-
 
 
 %----------------------------------------------------------------------------------------
@@ -155,75 +225,9 @@ This section contains code snippets with algorithms implementation. Each figures
 % CLASS DIAGRAM
 %
 \subsection{Operations Class Diagram}
-Classes performing operations (tresholding, histogram normalization and brightness manipulation) inherit from Filter class. Such approach has been pursued because it may happen in future that polimorphism will be useful with e.g. dealing with list of filters, which should be applied to one image. Figure \ref{fig:class_diag} depicts dependencies.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{_Figures/class_diagram_2.png}
-    \caption{Class diagram of implemented operations.}
-    \label{fig:class_diag}
-\end{figure}
 
-%
-% TRESHOLDING IMPLEMENTATION
-%
-\subsection{Tresholding Implementation}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{_Figures/treshold_function.jpg}
-    \caption{Overview of high abstraction level methods for tresholding. As one can see it may happens that input image is not in grayscale, in such a case appropriate exception is thrown (see figure \ref{fig:not_grayscale}).}
-    \label{fig:code:treshold_func}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth, left]{_Figures/notGrayscale.jpg}
-	\caption{Saturation on all channels is checked for equality.}
-	\label{fig:not_grayscale}
-\end{figure}
-	
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{_Figures/treshold_check.png}
-	\caption{Here we can see one of the results of remark given to section \ref{definitions} - color saturation must be multiplied by 255.}
-\end{figure}
-
-%
-% HISTOGRAM NORMALIZATION IMPLEMENTATION
-%
-\subsection{Histogram Normalization Implementation}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{_Figures/normalization_function.jpg}
-	\caption{Main, highly abstract method applying histogram normalization.}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{_Figures/normalization_type.jpg}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{_Figures/normalization_process.jpg}
-	\caption{Lower abstraction shows more about implementation and presents equations from section \ref{definitions}, concerning histogram normalization.}
-\end{figure}
-
-%
-% Brightness Implementation
-%
-\subsection*{Brightness Manipulation Implementation}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{_Figures/brigthness_function.jpg}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{_Figures/brighthness_clamp.jpg}
-\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
@@ -231,297 +235,16 @@ Classes performing operations (tresholding, histogram normalization and brightne
 
 \section{Results and Conclusions}
 
-%
-% TRESHOLD
-%
-\subsection{Tresholding Results}
-In case of tresholding, different pictures acts differently. To start with, figure \ref{fig:tresh_raw_1} acts greatly in case of iris extraction. As one can see image \ref{fig:tresh_good_1} presents extraction of  desired parts (treshold level 8). I have also notice that when treshold level is bigger than 40 (figure \ref{fig:tresh_bad_1}), image starts to have a lot of distortions in form of additional information about white of the eye.
 
-
-On the other hand picture \ref{fig:tresh_raw_2} had rather average results comparing to all others. Although flower object can be distinguished from rest of the surrounding (treshold level 105) but there is always a significant amount of artifacts in background and elevating treshold (picture \ref{fig:tresh_bad_2}; level over 180) reveals only worse outcomes - flower borders are starting to disappear.
-
-Figure \ref{fig:tresh_raw_3} behaves best in terms of tresholding. Distinguishing between a planet and USS Enterprise NCC-1701-D can be easily done at (treshold) level 32. Increasing treshold causes lost of information about ship along with background artifacts. I think that by finding good ratio between lost of the background noise and preserving Enterprise shape we will be able to still recreate the ship (e.g using dilatation filter) and clear the picture out of noise (to some reasonable level). Image \ref{fig:tresh_bad_3} presents treshold equal to 103.
-
-Last one - figure \ref{fig:tresh_raw_1}, also reacts nicely to the tresholding process. At level 105 (\ref{fig:tresh_good_4}) it almost perfectly distinguish between hair and face, but slight changes to the treshold immediately causes lost of coherence, as can be seen on \ref{fig:tresh_bad_4}.
-
-
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1.jpg}
-  \caption{}
-  \label{fig:tresh_raw_1}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_good_treshold.png}
-  \caption{}
-  \label{fig:tresh_good_1}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_bad_treshold.png}
-    \caption{}
-  \label{fig:tresh_bad_1}
-\end{subfigure}
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2.jpg}
-  \caption{}
-  \label{fig:tresh_raw_2}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_good_treshold.png}
-  \caption{}
-  \label{fig:tresh_good_2}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_bad_treshold.png}
-    \caption{}
-  \label{fig:tresh_bad_2}
-\end{subfigure}
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3.jpg}
-  \caption{}
-  \label{fig:tresh_raw_3}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_good_treshold.png}
-  \caption{}
-  \label{fig:tresh_good_3}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_bad_treshold.png}
-    \caption{}
-  \label{fig:tresh_bad_3}
-\end{subfigure}
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4.png}
-  \caption{}
-  \label{fig:tresh_raw_4}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_good_treshold.png}
-  \caption{}
-  \label{fig:tresh_good_4}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_bad_tresholding.png}
-    \caption{}
-  \label{fig:tresh_bad_4}
-\end{subfigure}
-
-\caption{Results for tresholding using experimental data.}
-\label{fig:results_tresh}
-\end{figure}
-
-%
-% HISTOGRAM
-%
-\subsection{Histogram Normalization Results}
-Figure \ref{fig:histogram_results} represent results obtained by stretching histogram of test images. First column represents raw images (\ref{fig:raw_hist_1}, \ref{fig:raw_hist_2}, \ref{fig:raw_hist_3}, \ref{fig:raw_hist_4}), next one corresponds to images with average approach (\ref{fig:average_hist_1}, \ref{fig:average_hist_2}, \ref{fig:average_hist_3}, \ref{fig:average_hist_4})and the last one (\ref{fig:per_hist_1}, \ref{fig:per_hist_2}, \ref{fig:per_hist_3}, \ref{fig:per_hist_4}) per channel approach (as described in \ref{definitions})
-
-As one can easily see, the process does not affect most of the pictures. In higher resolution it can be see that colors of figure \ref{fig:average_hist_1} are somehow more pleasant to the eye and quality of \ref{fig:raw_hist_4} has been drastically changed on \ref{fig:average_hist_4} and \ref{fig:per_hist_4}. On other two experimental data, no change has been observed.
-
-
-\begin{figure}[h]
-\centering
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1.jpg}
-  \caption{}
-  \label{fig:raw_hist_1}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_normalization_average.png}
-  \caption{}
-  \label{fig:average_hist_1}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_normalization_per_channel.png}
-  \caption{}
-    \label{fig:per_hist_1}
-\end{subfigure}%
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2.jpg}
-  \caption{}
-  \label{fig:raw_hist_2}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_normalization_average.png}
-    \caption{}
-      \label{fig:average_hist_2}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_normalization_per_channel.png}
-    \caption{}
-        \label{fig:per_hist_2}
-\end{subfigure}
-
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3.jpg}
-  \caption{}
-  \label{fig:raw_hist_3}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_normalization_average.png}
-    \caption{}
-      \label{fig:average_hist_3}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_normalization_per_channel.png}
-    \caption{}
-        \label{fig:per_hist_3}
-\end{subfigure}
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4.png}
-  \caption{}
-   \label{fig:raw_hist_4}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_normalization_average.png}
-    \caption{}
-      \label{fig:average_hist_4}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_normalization_per_channel.png}
-    \caption{}
-        \label{fig:per_hist_4}
-\end{subfigure}
-
-
-\caption{Results for histogram normalization of experimental data. }
-\label{fig:histogram_results}
-\end{figure}
-
-%
-% BRIGTHNESS
-%
-\subsection{Brightness Manipulation Results}
-All pictures are acting rather the same - they have more and more light in process of adding brightness factor. All images were exposed to the same brightness level i.e \ref{fig:brigth_low_1}, \ref{fig:brigth_low_2}, \ref{fig:brigth_low_3}, \ref{fig:brigth_low_4} are at level 86 and \ref{fig:brigth_high_1}, \ref{fig:brigth_high_2}, \ref{fig:brigth_high_3}, \ref{fig:brigth_high_4} at level 186. From experimental data we see that only \ref{fig:brigth_high_4} is somehow all lost - it may be caused by the fact that it is in grayscale.
-
-\begin{figure}[h]
-\centering
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1.jpg}
-  \caption{}
-  \label{fig:brigth_raw_1}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_brightness_low.png}
-  \caption{}
-  \label{fig:brigth_low_1}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_1_brightness_high.png}
-  \caption{}
-    \label{fig:brigth_high_1}
-\end{subfigure}%
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2.jpg}
-  \caption{}
-  \label{fig:brigth_raw_2}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_brigthness_low.png}
-    \caption{}
-      \label{fig:brigth_low_2}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_2_brigthness_high.png}
-    \caption{}
-        \label{fig:brigth_high_2}
-\end{subfigure}
-
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3.jpg}
-  \caption{}
-  \label{fig:brigth_raw_3}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_brigthness_low.png}
-    \caption{}
-      \label{fig:brigth_low_3}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_3_brigthness_high.png}
-    \caption{}
-        \label{fig:brigth_high_3}
-\end{subfigure}
-
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4.png}
-  \caption{}
-   \label{fig:brigth_raw_4}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_brigthness_low.png}
-    \caption{}
-      \label{fig:brigth_low_4}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/sample_4_brigthness_high.png}
-    \caption{}
-        \label{fig:brigth_high_4}
-\end{subfigure}
-
-
-\caption{Results for brightness manipulation of experimental data. }
-\label{fig:brigthness_results}
-\end{figure}
-
-To shortly sum up - all pictures were acting as assumed. Although histogram normalization required more work to implement, almost nothing can be seen on the experimental images. It may be caused by bad selection process - maybe \ref{fig:sample_2} and \ref{fig:sample_3} were already normalized? We will never know.
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 \newpage
 
 \begin{thebibliography}{1}
-	\bibitem{tresholding_def} \url{https://www.wordnik.com/words/thresholding}
-	\bibitem{image_histogram_def} \url{https://svi.nl/ImageHistogram}
-	\bibitem{histogram_normalization_def} \url{https://en.wikipedia.org/wiki/Normalization_(image_processing)}
-	\bibitem{brightness_def1} \url{http://olympusmicro.com/primer/java/olympusmicd/digitalimaging/contrast/index.html}
+	\bibitem{convolution_wolphram} \url{http://mathworld.wolfram.com/Convolution.html}
+	\bibitem{convolution_wiki} \url{https://en.wikipedia.org/wiki/Convolution#Discrete_convolution}
+	\bibitem{convolution_equations} \url{https://graphics.stanford.edu/courses/cs178/applets/convolution.html}
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
