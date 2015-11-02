@@ -99,6 +99,10 @@ Instructor: & mgr Piotr Panasiuk % Instructor/supervisor
 \textcolor{red}{Remark:} throughout this report I will assume that each of red, green, blue channels of a pixel can take values from $0$ to $1$. It is imposed by JavaFX 8 - technology used to implement algorithms.
 
 \begin{description}
+
+%
+% CONVOLUTION DEFINITION
+%
 \item[Convolution]
 A convolution is an integral that expresses the amount of overlap of one function g as it is shifted over another function f. It therefore "blends" one function with another  \cite{convolution_wolphram}. 
 
@@ -116,6 +120,9 @@ f[x] * g[x] = \sum_{k=-\infty}^{\infty} f[k] \cdot g[x-k]
 \end{equation}
 This form will be of particular interest for us, since it can be (more or less) directly applied to an image as showed in the next subsection.
 
+%
+% Convolution Filters
+%
 \item[Convolution Filters]
 As mentioned, one can ad hoc transform equation \ref{conv_one_var_disc} into two variable case:
 \begin{equation} \label{two_var_conv_one_var_disc}
@@ -123,10 +130,11 @@ f[x,y] * g[x,y] =\sum_{n_{1}=-\infty}^{\infty} \sum_{n_{2}=-\infty}^{\infty} f[n
 \end{equation}
 , but for our purposes (as explained in a moment) we will use a slightly modified version of equation \ref{two_var_conv_one_var_disc}, namely:
 \begin{equation} \label{final_two_var_conv_one_var_disc}
-f[x,y] * g[x,y] =\sum_{n_{1}=k_{1}}^{k_{2}} \sum_{n_{2}=k_{3}}^{k_{4}} f[n_{1}, n_{2}] \cdot g[x+n_{1}, y + n_{2}]
+f[x,y] * g[x,y] = d \cdot (\sum_{n_{1}=k_{1}}^{k_{2}} \sum_{n_{2}=k_{3}}^{k_{4}} f[n_{1}, n_{2}] \cdot g[x+n_{1}, y + n_{2}])
 \end{equation}
 ,where:
 \begin{conditions} 
+  d \in \mathbb{R} & scaling variable\\
   n_{1}, n_{2} \in \mathbb{N}& auxiliary shifting variables\\
   k_{1}, k_{2}, k_{3}, k_{4} \in \mathbb{N}& size restriction to convolution matrix (kernel)\\
  (x,y) \in \mathbb{N}^{2}     &  pixel of interest's position on an image in XY coordinates \\   
@@ -138,15 +146,17 @@ Equation \ref{two_var_conv_one_var_disc} has been changed due to obsolete $g[x-k
 
 In addition, we restrict $g[x,y]$ by $k$'s variables, because we want our convolution matrix to be finite. 
 In this case we can think of $f[x,y]$ as a frame, which we move over some pixel $(x,y)$ of an image $g[x,y]$. Then by applying equation \ref{final_two_var_conv_one_var_disc} we sum all values of $g$ over
-$ \langle x + k_1; x+ k_2 \rangle \cup \langle y + k_3 ; y + k_4 \rangle$ interval multiplied by appropriate values of $f$. 
+$ \langle x + k_1; x+ k_2 \rangle \cup \langle y + k_3 ; y + k_4 \rangle$ interval multiplied by appropriate values of $f$.
+
+What is more variable $d$ is a constant useful in computer implementation. I presume, that its main aim is to force kernel matrix values to stay in form of natural numbers.
 
 As an example let us assume that:
 \begin{conditions} 
   g[x,y] : \langle 1; 5 \rangle \cup \langle 1 ; 7 \rangle \rightarrow \mathbb{N} & some very small image\\
-  f[x,y] : \langle -1; 1 \rangle \cup \langle -1 ; 1 \rangle \rightarrow \mathbb{N} & kernel matrix
+  f[x,y] : \langle -1; 1 \rangle \cup \langle -1 ; 1 \rangle \rightarrow \mathbb{N} & kernel matrix \\
 \end{conditions}
 
-In such a case we can present both of them in form of matrices of some natural values. Let us assume that figure \ref{fig:example_repr} defines $f[x,y]$ and $g[x,y]$ in terms of matrices.
+In such a case we can present both of them in form of matrices of some natural values. Let us assume that figure \ref{fig:example_repr} defines $f[x,y]$ and $g[x,y]$ in terms of matrices. Value of $d$ will be 1.
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.4\textwidth}
@@ -194,24 +204,206 @@ In this way pixel of output image, positioned at $(4,3)$ will have value $205$. 
 \end{minipage}
 \end{figure}
 
-For the rest of the paper we will use only $3 \times 3$ kernel matrices, hence $k_1 = k_3 = -1$ and $k_2 = k_4 = 1$.
+\textcolor{red}{Remark:} If not stated otherwise, for the rest of the paper we will use only $3 \times 3$ kernel matrices, hence $k_1 = k_3 = -1$ and $k_2 = k_4 = 1$.
 
+%
+% HIG PASS FILTER DEFINITION
+%
 \item[High Pass Filter]
+A high pass filter tends to retain the high frequency information within an image while reducing the low frequency information. The kernel of the high pass filter is designed to increase the brightness of the center pixel relative to neighbouring pixels. The kernel array usually contains a single positive value at its center, which is completely surrounded by negative values \cite{high_pass_def}. 
+
+During laboratories we used following kernel:
+\[
+\begin{pmatrix}
+  -1 & -1 & -1 \\
+  -1 & 9 & -1 \\
+  -1 & -1 & -1  \\
+ \end{pmatrix}
+ \]
+with coefficient $d = \frac{1}{9}$ (see equation \ref{final_two_var_conv_one_var_disc} and previous subsection for a reference). 
+
+%
+% LOW PASS FILTER DEFINITION
+%
 \item[Low Pass Filter]
-\item[Gaussian Filter]
+A low pass filter is the basis for most smoothing methods. An image is smoothed by decreasing the disparity between pixel values by averaging nearby pixels. Using a low pass filter tends to retain the low frequency information within an image while reducing the high frequency information \cite{high_pass_def}.
+
+During laboratories we used following kernel:
+\[
+\begin{pmatrix}
+  1 & 1 & 1 \\
+  1 & 1 & 1 \\
+  1 & 1 & 1  \\
+ \end{pmatrix}
+ \]
+with coefficient $d = \frac{1}{9}$ (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
+
+%
+% GAUSSIAN FILTER DEFINITION
+% 
+\item[Gaussian Filter] Type of image-blurring filter that uses a Gaussian function (which also expresses the normal distribution in statistics) for calculating the transformation to apply to each pixel in the image \cite{gaussian_blur}.
+
+\begin{figure}[H]
+\hskip 2.5em
+\begin{minipage}{0.6\textwidth}\raggedright
+The original pixel's value receives the heaviest weight (having the highest Gaussian value) and neighbouring pixels receive smaller weights as their distance to the original pixel increases. This results in a blur that preserves boundaries and edges better than other, more uniform blurring filters \cite{gaussian_blur}.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+	\includegraphics[width=\linewidth]{_Figures/gaussian.png} 
+	\label{fig:caution}
+\end{minipage}%
+\hfill%
+\end{figure}
+
+During laboratories we used following kernel:
+\[
+\begin{pmatrix}
+  1 & 4 & 1 \\
+  4 & 16 & 4 \\
+  1 & 4 & 1  \\
+ \end{pmatrix}
+ \]
+with coefficient $d = \frac{1}{36}$ (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
+
 \item[Sobel Filter]
+Performs a 2D spatial gradient measurement on an image and so emphasizes regions of high spatial frequency that correspond to edges \cite{sobel_bib1}.
+
+Let us define $3 \times 3$ neighbourhood of pixel of interest $px$ as :
+\[
+N = 
+\begin{pmatrix}
+  p0 & p1 & p2 \\
+  p7 & px & p3 \\
+  p6 & p5 & p4
+\end{pmatrix}
+\]
+
+To approximate appropriate derivatives on x ($G_x$) and y ($G_y$), we use following formulas:
+\[
+G_x =
+\begin{pmatrix}
+  -1 & -2 & -1 \\
+   0 & 0 & 0 \\
+   1 & 2 & 1
+\end{pmatrix}
+\times
+N
+\hskip 2.5em
+G_y =
+\begin{pmatrix}
+  -1 & 0 & 1 \\
+   -2 & 0 & 2 \\
+   -1 & 0 & 1
+\end{pmatrix}
+\times
+N
+\]
+, where $\times$ is an operation of matrix multiplication. What follows, values of each gradient can be directly calculated from neighbourhood pixels using following equations:
+\[
+\begin{split}
+G_x = (p2 + 2 \cdot p3 + p4) - (p0 + 2 \cdot p7 + p6) \\
+G_y = (p6 + 2 \cdot p5 + p4) - (p0 + 2 \cdot p1 + p2)
+\end{split}
+\]
+Now output pixel value ($px_{out}$), based on gradient, can be calculated as:
+\[
+px_{out} = \sqrt{G_x^2 + G_y^2}
+\]
+
+\pagebreak
+
+\item[Blur Filter]
+Due to the demands of the task of pupil extraction, I needed some tool to blur an image to a higher degree than $3 \times 3$ Low Pass Filter or $3 \times 3$ Gaussian filter can. What is more, I could not allow myself to not process border pixels. Because of all of this requirements simple extension to Low Pass Filter has been made.
+
+Kernel is as follows:
+\[
+\begin{pmatrix}
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 \\
+  1 & 1 & 1 & 1 & 1 & 1 &1 
+ \end{pmatrix}
+ \]
+with coefficient $d = \frac{1}{49 - \sigma}$, where $\sigma$ is number of pixels that can not be processed due to border case. In other words, for pixel of interest $px$, $\sigma$ represents number of $f[x,y]$ values for, which there is no corresponding $g[x,y]$ value (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
+
+%
+% STRUCTING ELEMENT
+$
+\item[Structing Element] As stated in \cite{morphological}, structing element is a small binary image, i.e. a small matrix of pixels, each with a value of $0$ or $1$:
+
+\begin{itemize}
+\item The matrix dimensions specify the size of the structuring element.
+\item The pattern of ones and zeros specifies the shape of the structuring element.
+\item An origin of the structuring element is usually one of its pixels, although generally the origin can be outside the structuring element
+\end{itemize}
+
+Figure \ref{fig:struct_exampl} depicts squared, diamond-shaped and cross-shaped elements, respectively.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{_Figures/struct_el_example.jpg}
+  \caption{Examples of structing element for morphological operations.}
+  \label{fig:struct_exampl}
+\end{figure}%
+
+
+A common practice is to have odd dimensions of the structuring matrix and the origin defined as the centre of the matrix. Stucturing elements play in moprphological image processing the same role as convolution kernels in linear image filtering \cite{morphological}.
+
+The structuring element is said to \textbf{fit} the image if, for each of its pixels set to 1, the corresponding image pixel is also 1. Similarly, a structuring element is said to \textbf{hit}, or intersect, an image if, at least for one of its pixels set to 1 the corresponding image pixel is also 1 \cite{morphological}.
 \item[Dilation]
+
 \item[Erosion]
 \item[Flood Fill Algorithm]
-\end{description} 
 
+\end{description} 
+\pagebreak
  
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 
 \section{Experimental Data}
+During laboratory we used only one image (i.e. \ref{fig:sample_1}), but to enrich this report I will use another four of them. Since final task was to find pupil, I decided that all data will present human eyes.
 
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:sample_1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_2.jpg}
+    \caption{}
+  \label{fig:sample_2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:sample_3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+    \caption{}
+  \label{fig:sample_4}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.6\linewidth]{_Figures/raw_data_5.jpg}
+    \caption{}
+  \label{fig:sample_4}
+\end{subfigure}
+\caption{Images used to check implemented algorithms.}
+\label{fig:double_samples}
+\end{figure}
+
+\pagebreak
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -226,6 +418,65 @@ This section contains code snippets with algorithms implementation. Each figures
 %
 \subsection{Operations Class Diagram}
 
+
+%
+% CONVOLUTION FILTER CODE
+%
+\subsection{Convolution Filter Implementation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.97\textwidth]{_Figures/conv_filter_apply.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{_Figures/conv_filter_weight.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.97\textwidth]{_Figures/conv_filter_kernel.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
+
+
+%
+% HIGH PASS CODE
+%
+\subsection{High Pass Filter Implementation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.97\textwidth]{_Figures/highpass_class.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
+
+%
+% LOW PASS CODE
+%
+\subsection{Low Pass Filter Implementation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.97\textwidth]{_Figures/lowpass_class.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
+
+%
+% GAUSSIAN FILTER CODE
+%
+\subsection{Gaussian Filter Implementation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.97\textwidth]{_Figures/gaussian_class.jpg}
+    \caption{Auxiliary method and fields value of HighPassFilter class.}
+    \label{fig:code:treshold_func}
+\end{figure}
 
 
 
@@ -243,8 +494,12 @@ This section contains code snippets with algorithms implementation. Each figures
 
 \begin{thebibliography}{1}
 	\bibitem{convolution_wolphram} \url{http://mathworld.wolfram.com/Convolution.html}
-	\bibitem{convolution_wiki} \url{https://en.wikipedia.org/wiki/Convolution#Discrete_convolution}
+	\bibitem{convolution_wiki} \url{https://en.wikipedia.org/wiki/Convolution}
 	\bibitem{convolution_equations} \url{https://graphics.stanford.edu/courses/cs178/applets/convolution.html}
+	\bibitem{high_pass_def} \url{http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Filtering_an_Imagehvr.html}
+	\bibitem{gaussian_blur} \url{https://en.wikipedia.org/wiki/Gaussian_blur}
+	\bibitem{sobel_bib1} \url{http://homepages.inf.ed.ac.uk/rbf/HIPR2/sobel.htm}
+	\bibitem{morphological} \url{https://www.cs.auckland.ac.nz/courses/compsci773s1c/lectures/ImageProcessing-html/topic4.htm}		
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------

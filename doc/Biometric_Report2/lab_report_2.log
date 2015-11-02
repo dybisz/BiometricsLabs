@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  31 OCT 2015 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  2 NOV 2015 18:31
 entering extended mode
 **lab_report_2.tex
 (lab_report_2.tex
@@ -676,7 +676,32 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(lab_report_2.aux)
+(lab_report_2.aux
+
+LaTeX Warning: Label `fig:caution' multiply defined.
+
+
+LaTeX Warning: Label `fig:sample_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sample_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+
+
+LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+
+
+LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+
+
+LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+
+
+LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
@@ -780,7 +805,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
 [1
 
 {C:/Users/dybisz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (29.65779pt too wide) in paragraph at lines 129--135
+Overfull \hbox (29.65779pt too wide) in paragraph at lines 136--143
 [] 
  []
 
@@ -788,51 +813,179 @@ Overfull \hbox (29.65779pt too wide) in paragraph at lines 129--135
 File: _Figures/example_11.jpg Graphic file (type jpg)
 
 <use _Figures/example_11.jpg>
-Package pdftex.def Info: _Figures/example_11.jpg used on input line 154.
+Package pdftex.def Info: _Figures/example_11.jpg used on input line 164.
 (pdftex.def)             Requested size: 131.09756pt x 72.20648pt.
 
 <_Figures/example_12.jpg, id=23, 244.66406pt x 137.7647pt>
 File: _Figures/example_12.jpg Graphic file (type jpg)
 
 <use _Figures/example_12.jpg>
-Package pdftex.def Info: _Figures/example_12.jpg used on input line 160.
+Package pdftex.def Info: _Figures/example_12.jpg used on input line 170.
 (pdftex.def)             Requested size: 131.09756pt x 73.82004pt.
-
-<_Figures/conv_filter_border.jpg, id=24, 194.97844pt x 189.70876pt>
+ [3 <./_Figures/example_11.jpg> <./_Figures/example_12.jpg>] <_Figures/conv_fil
+ter_border.jpg, id=28, 194.97844pt x 189.70876pt>
 File: _Figures/conv_filter_border.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_border.jpg>
-Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 187
+Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 197
 .
 (pdftex.def)             Requested size: 103.50105pt x 100.70436pt.
- [3 <./_Figures/example_11.jpg> <./_Figures/example_12.jpg>] [4 <./_Figures/con
-v_filter_border.jpg>] [5] [6]
-(lab_report_2.aux) ) 
+
+
+Package caption Warning: \label without proper \caption on input line 253.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:caution' on page 4 undefined on input line 203.
+
+<_Figures/gaussian.png, id=29, 249.18094pt x 213.04594pt>
+File: _Figures/gaussian.png Graphic file (type png)
+
+<use _Figures/gaussian.png>
+Package pdftex.def Info: _Figures/gaussian.png used on input line 252.
+(pdftex.def)             Requested size: 103.50105pt x 88.49043pt.
+ [4 <./_Figures/conv_filter_border.jpg>] [5 <./_Figures/gaussian.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 335.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 335.
+
+<_Figures/struct_el_example.jpg, id=36, 269.50688pt x 73.77562pt>
+File: _Figures/struct_el_example.jpg Graphic file (type jpg)
+
+<use _Figures/struct_el_example.jpg>
+Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 343.
+
+(pdftex.def)             Requested size: 241.49895pt x 66.10924pt.
+ [6 <./_Figures/struct_el_example.jpg>]
+[7] <_Figures/raw_data_1.jpg, id=44, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 371.
+(pdftex.def)             Requested size: 167.32521pt x 96.04568pt.
+
+<_Figures/raw_data_2.jpg, id=45, 592.2125pt x 448.67625pt>
+File: _Figures/raw_data_2.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_2.jpg>
+Package pdftex.def Info: _Figures/raw_data_2.jpg used on input line 377.
+(pdftex.def)             Requested size: 167.32521pt x 126.76497pt.
+
+<_Figures/raw_data_3.jpg, id=46, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 383.
+(pdftex.def)             Requested size: 167.32521pt x 139.08801pt.
+
+<_Figures/raw_data_4.jpg, id=47, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 389.
+(pdftex.def)             Requested size: 167.32521pt x 111.63643pt.
+
+<_Figures/raw_data_5.jpg, id=48, 472.76625pt x 451.6875pt>
+File: _Figures/raw_data_5.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_5.jpg>
+Package pdftex.def Info: _Figures/raw_data_5.jpg used on input line 395.
+(pdftex.def)             Requested size: 103.50105pt x 98.8822pt.
+ [8 <./_Figures/raw_data_1.jpg> <./_Figures/raw_data_2.jpg> <./_Figures/raw_dat
+a_3.jpg> <./_Figures/raw_data_4.jpg> <./_Figures/raw_data_5.jpg>]
+<_Figures/conv_filter_apply.jpg, id=52, 402.00188pt x 185.94469pt>
+File: _Figures/conv_filter_apply.jpg Graphic file (type jpg)
+
+<use _Figures/conv_filter_apply.jpg>
+Package pdftex.def Info: _Figures/conv_filter_apply.jpg used on input line 425.
+
+(pdftex.def)             Requested size: 334.65042pt x 154.79083pt.
+
+<_Figures/conv_filter_weight.jpg, id=53, 325.215pt x 70.76437pt>
+File: _Figures/conv_filter_weight.jpg Graphic file (type jpg)
+
+<use _Figures/conv_filter_weight.jpg>
+Package pdftex.def Info: _Figures/conv_filter_weight.jpg used on input line 432
+.
+(pdftex.def)             Requested size: 276.00105pt x 60.06036pt.
+
+<_Figures/conv_filter_kernel.jpg, id=54, 379.4175pt x 274.02374pt>
+File: _Figures/conv_filter_kernel.jpg Graphic file (type jpg)
+
+<use _Figures/conv_filter_kernel.jpg>
+Package pdftex.def Info: _Figures/conv_filter_kernel.jpg used on input line 439
+.
+(pdftex.def)             Requested size: 334.65042pt x 241.69774pt.
+ [9 <./_Figures/conv_filter_apply.jpg> <./_Figures/conv_filter_weight.jpg>]
+<_Figures/highpass_class.jpg, id=58, 377.91188pt x 284.56313pt>
+File: _Figures/highpass_class.jpg Graphic file (type jpg)
+
+<use _Figures/highpass_class.jpg>
+Package pdftex.def Info: _Figures/highpass_class.jpg used on input line 451.
+(pdftex.def)             Requested size: 334.65042pt x 251.98814pt.
+ [10 <./_Figures/conv_filter_kernel.jpg>]
+<_Figures/lowpass_class.jpg, id=62, 377.15906pt x 284.56313pt>
+File: _Figures/lowpass_class.jpg Graphic file (type jpg)
+
+<use _Figures/lowpass_class.jpg>
+Package pdftex.def Info: _Figures/lowpass_class.jpg used on input line 462.
+(pdftex.def)             Requested size: 334.65042pt x 252.49182pt.
+ [11 <./_Figures/highpass_class.jpg>]
+<_Figures/gaussian_class.jpg, id=66, 374.90062pt x 277.035pt>
+File: _Figures/gaussian_class.jpg Graphic file (type jpg)
+
+<use _Figures/gaussian_class.jpg>
+Package pdftex.def Info: _Figures/gaussian_class.jpg used on input line 473.
+(pdftex.def)             Requested size: 334.65042pt x 247.30435pt.
+ [12 <./_Figures/lowpass_class.jpg>] [13 <./_Figures/gaussian_class.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+[]$\OT1/cmr/m/n/10 http : / / northstar-[]www . dartmouth . edu / doc / idl / h
+tml[]6 . 2 / Filtering[]an[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+[]$\OT1/cmr/m/n/10 https : / / www . cs . auckland . ac . nz / courses / compsc
+i773s1c / lectures /$
+ []
+
+[14] (lab_report_2.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15448 strings out of 493673
- 314473 string characters out of 3143957
- 343261 words of memory out of 3000000
- 18657 multiletter control sequences out of 15000+200000
+ 15546 strings out of 493673
+ 316833 string characters out of 3143957
+ 342439 words of memory out of 3000000
+ 18738 multiletter control sequences out of 15000+200000
  14924 words of font info for 59 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 53i,16n,92p,10440b,654s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lab_report_2.pdf (6 pages, 216571 bytes).
+ 53i,16n,92p,10440b,656s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on lab_report_2.pdf (14 pages, 1239686 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
