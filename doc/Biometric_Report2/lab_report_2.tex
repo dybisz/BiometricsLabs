@@ -313,7 +313,7 @@ px_{out} = \sqrt{G_x^2 + G_y^2}
 \pagebreak
 
 \item[Blur Filter]
-Due to the demands of the task of pupil extraction, I needed some tool to blur an image to a higher degree than $3 \times 3$ Low Pass Filter or $3 \times 3$ Gaussian filter can. What is more, I could not allow myself to not process border pixels. Because of all of this requirements simple extension to Low Pass Filter has been made.
+Due to the demands of the task of pupil extraction, I needed some tool to blur an image to a higher degree than $3 \times 3$ Low Pass Filter or $3 \times 3$ Gaussian filter can. What is more, I could not allowed myself to not process border pixels. Because of all of this requirements simple extension to Low Pass Filter has been made.
 
 Kernel is as follows:
 \[
@@ -330,8 +330,15 @@ Kernel is as follows:
 with coefficient $d = \frac{1}{49 - \sigma}$, where $\sigma$ is number of pixels that can not be processed due to border case. In other words, for pixel of interest $px$, $\sigma$ represents number of $f[x,y]$ values for, which there is no corresponding $g[x,y]$ value (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
 
 %
-% STRUCTING ELEMENT
-$
+% MORPHOLOGICAL IMAGE PROCESSING DEFINITION
+%
+\item[Morphological Image Processing] Is a collection of non-linear operations related to the shape or morphology of features in an image. According to \cite{morph_wiki}, morphological operations rely only on the relative ordering of pixel values, not on their numerical values, and therefore are especially suited to the processing of binary images.
+
+Morphological techniques probe an image with a small shape or template called a structuring element. The structuring element is positioned at all possible locations in the image and it is compared with the corresponding neighbourhood of pixels \cite{morphological}.
+
+%
+% STRUCTING ELEMENT DEFINITION
+%
 \item[Structing Element] As stated in \cite{morphological}, structing element is a small binary image, i.e. a small matrix of pixels, each with a value of $0$ or $1$:
 
 \begin{itemize}
@@ -349,12 +356,92 @@ Figure \ref{fig:struct_exampl} depicts squared, diamond-shaped and cross-shaped 
 \end{figure}%
 
 
-A common practice is to have odd dimensions of the structuring matrix and the origin defined as the centre of the matrix. Stucturing elements play in moprphological image processing the same role as convolution kernels in linear image filtering \cite{morphological}.
+A common practice is to have odd dimensions of the structuring matrix and the origin defined as the centre of the matrix. Structuring elements play in morphological image processing the same role as convolution kernels in linear image filtering \cite{morphological}.
 
 The structuring element is said to \textbf{fit} the image if, for each of its pixels set to 1, the corresponding image pixel is also 1. Similarly, a structuring element is said to \textbf{hit}, or intersect, an image if, at least for one of its pixels set to 1 the corresponding image pixel is also 1 \cite{morphological}.
-\item[Dilation]
 
-\item[Erosion]
+\textcolor{red}{Remark:} In case of border pixels, I will follow pattern implemented in Matlab \cite{matlab}: during dilation, pixels beyond the image border are assigned the minimum value afforded by the data type (e.g in binary images, these pixels are assumed to be set to 0). On the other hand during erosion, such a pixels will take maximum value (again, for binary images binary images, these pixels are assumed to be set to 1).
+
+%
+% EROSION DEFINITION
+%
+\item[Erosion] We define erosion ($\ominus$) of binary image $f$ by structuring element $s$ as:
+\[
+    f \ominus s= (\forall{(x,y) \in f})  \;\;
+    g(x,y) = 
+\begin{cases}
+    1,& \text{if s fits f }\\
+    0,              & \text{otherwise}
+\end{cases} 
+\]
+, where $g$ is output image and $g(x,y)$ denotes value of pixel of coordinate $(x,y)$ on $g$.
+
+What is interesting erosion is equivalent to computing local minimum over the area of the structuring element. We scan the input image $f$, we compute minimal pixel value overlapped by $s$ and we replace pixel of interest with this value (we save it in $g$)\cite{slajdy_morph}.
+
+Figure \ref{fig:erosion_exampl} presents erosion on small image with $3 \times 3$ squared-shaped structuring element.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{_Figures/erosion_example.jpg}
+  \caption{Example of erosion.}
+  \label{fig:erosion_exampl}
+\end{figure}%
+
+%
+% DILATION DEFINITION
+%
+\item[Dilation] We define dilation ($\oplus$) of binary image $f$ by structuring element $s$ as:
+\[
+    f \oplus s= (\forall{(x,y) \in f})  \;\;
+    g(x,y) = 
+\begin{cases}
+    1,& \text{if s hits f }\\
+    0,              & \text{otherwise}
+\end{cases} 
+\]
+, where $g$ is output image and $g(x,y)$ denotes value of pixel of coordinate $(x,y)$ on $g$.
+
+Dilation is converse of erosion. It gradually enlarges the boundaries of regions of foreground pixels. Thus areas of foreground regions grow in size, while holes within those regions become smaller \cite{slajdy_morph}.
+
+Figure \ref{fig:dilation_exampl} presents dilation on small image with $3 \times 3$ squared-shaped structuring element.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\linewidth]{_Figures/dilation_example.jpg}
+  \caption{Example of dilation.}
+  \label{fig:dilation_exampl}
+\end{figure}%
+
+%
+% OPENING DEFINITION
+% 
+\item[Opening]
+The opening of an image $f$  by a structuring element $s$ (denoted by $f \circ s$) is an erosion followed by a dilation \cite{morphological}: 
+\[
+f \circ s = (f \ominus s) \oplus s
+\]
+Opening is so called because it can open up a gap between objects connected by a thin bridge of pixels. Any regions that have survived the erosion are restored to their original size by the dilation.
+
+In addition, opening is an idempotent operation: once an image has been opened, subsequent openings with the same structuring element have no further effect on that image \cite{morphological}:
+\[
+(f \circ s) \circ s = f \circ s
+\]
+
+
+%
+% CLOSING DEFINITION
+%
+\item[Closing] The closing of an image $f$  by a structuring element $s$ (denoted by $f \bullet s$) is a dilation followed by an erosion: 
+\[
+f \bullet s = (f \oplus s_{rot}) \ominus s_{rot}
+\]
+, where $s_{rot}$ denotes structuring element rotated by $180^{o}$. In most cases $s$ will be symmetrical though.
+
+Closing is so called because it can fill holes in the regions while keeping the initial region sizes. Like opening, closing is idempotent \cite{morphological}:
+\[
+(f \bullet s) \bullet s = f \bullet s
+\]
+%
+% FLOOD FILL ALGORITHM DEFINITION
+%
 \item[Flood Fill Algorithm]
 
 \end{description} 
@@ -499,7 +586,11 @@ This section contains code snippets with algorithms implementation. Each figures
 	\bibitem{high_pass_def} \url{http://northstar-www.dartmouth.edu/doc/idl/html_6.2/Filtering_an_Imagehvr.html}
 	\bibitem{gaussian_blur} \url{https://en.wikipedia.org/wiki/Gaussian_blur}
 	\bibitem{sobel_bib1} \url{http://homepages.inf.ed.ac.uk/rbf/HIPR2/sobel.htm}
+	\bibitem{morph_wiki} \url{https://en.wikipedia.org/wiki/Mathematical_morphology}	
 	\bibitem{morphological} \url{https://www.cs.auckland.ac.nz/courses/compsci773s1c/lectures/ImageProcessing-html/topic4.htm}		
+	\bibitem{matlab} \url{http://www.mathworks.com/help/images/morphology-fundamentals-dilation-and-erosion.html}
+	\bibitem{slajdy_morph} \url{http://www.slideshare.net/vinayaknarayanan/morphological-image-processing-12323183}
+	
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
