@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  2 NOV 2015 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  2 NOV 2015 20:58
 entering extended mode
 **lab_report_2.tex
 (lab_report_2.tex
@@ -757,55 +757,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathtt_int=\count212
 Missing character: There is no Å in font cmr12!
 Missing character: There is no ‚ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-[1
+ [1
 
 {C:/Users/dybisz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (29.65779pt too wide) in paragraph at lines 136--143
+Overfull \hbox (29.65779pt too wide) in paragraph at lines 144--151
 [] 
  []
 
@@ -813,51 +768,51 @@ Overfull \hbox (29.65779pt too wide) in paragraph at lines 136--143
 File: _Figures/example_11.jpg Graphic file (type jpg)
 
 <use _Figures/example_11.jpg>
-Package pdftex.def Info: _Figures/example_11.jpg used on input line 164.
+Package pdftex.def Info: _Figures/example_11.jpg used on input line 172.
 (pdftex.def)             Requested size: 131.09756pt x 72.20648pt.
 
 <_Figures/example_12.jpg, id=23, 244.66406pt x 137.7647pt>
 File: _Figures/example_12.jpg Graphic file (type jpg)
 
 <use _Figures/example_12.jpg>
-Package pdftex.def Info: _Figures/example_12.jpg used on input line 170.
+Package pdftex.def Info: _Figures/example_12.jpg used on input line 178.
 (pdftex.def)             Requested size: 131.09756pt x 73.82004pt.
  [3 <./_Figures/example_11.jpg> <./_Figures/example_12.jpg>] <_Figures/conv_fil
 ter_border.jpg, id=28, 194.97844pt x 189.70876pt>
 File: _Figures/conv_filter_border.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_border.jpg>
-Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 197
+Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 205
 .
 (pdftex.def)             Requested size: 103.50105pt x 100.70436pt.
 
 
-Package caption Warning: \label without proper \caption on input line 253.
+Package caption Warning: \label without proper \caption on input line 261.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:caution' on page 4 undefined on input line 203.
+LaTeX Warning: Reference `fig:caution' on page 4 undefined on input line 211.
 
 <_Figures/gaussian.png, id=29, 249.18094pt x 213.04594pt>
 File: _Figures/gaussian.png Graphic file (type png)
 
 <use _Figures/gaussian.png>
-Package pdftex.def Info: _Figures/gaussian.png used on input line 252.
+Package pdftex.def Info: _Figures/gaussian.png used on input line 260.
 (pdftex.def)             Requested size: 103.50105pt x 88.49043pt.
  [4 <./_Figures/conv_filter_border.jpg>] [5 <./_Figures/gaussian.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 345.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 353.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 353.
 
 <_Figures/struct_el_example.jpg, id=36, 269.50688pt x 73.77562pt>
 File: _Figures/struct_el_example.jpg Graphic file (type jpg)
 
 <use _Figures/struct_el_example.jpg>
-Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 353.
+Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 361.
 
 (pdftex.def)             Requested size: 241.49895pt x 66.10924pt.
  [6]
@@ -865,49 +820,49 @@ Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 353.
 File: _Figures/erosion_example.jpg Graphic file (type jpg)
 
 <use _Figures/erosion_example.jpg>
-Package pdftex.def Info: _Figures/erosion_example.jpg used on input line 384.
+Package pdftex.def Info: _Figures/erosion_example.jpg used on input line 392.
 (pdftex.def)             Requested size: 137.9979pt x 69.90771pt.
  [7 <./_Figures/struct_el_example.jpg> <./_Figures/erosion_example.jpg>]
 <_Figures/dilation_example.jpg, id=45, 342.5297pt x 174.6525pt>
 File: _Figures/dilation_example.jpg Graphic file (type jpg)
 
 <use _Figures/dilation_example.jpg>
-Package pdftex.def Info: _Figures/dilation_example.jpg used on input line 408.
+Package pdftex.def Info: _Figures/dilation_example.jpg used on input line 416.
 (pdftex.def)             Requested size: 137.9979pt x 70.3661pt.
  [8 <./_Figures/dilation_example.jpg>]
 <_Figures/raw_data_1.jpg, id=49, 501.875pt x 288.07625pt>
 File: _Figures/raw_data_1.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_1.jpg>
-Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 461.
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 469.
 (pdftex.def)             Requested size: 167.32521pt x 96.04568pt.
 
 <_Figures/raw_data_2.jpg, id=50, 592.2125pt x 448.67625pt>
 File: _Figures/raw_data_2.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_2.jpg>
-Package pdftex.def Info: _Figures/raw_data_2.jpg used on input line 467.
+Package pdftex.def Info: _Figures/raw_data_2.jpg used on input line 475.
 (pdftex.def)             Requested size: 167.32521pt x 126.76497pt.
 
 <_Figures/raw_data_3.jpg, id=51, 642.4pt x 533.995pt>
 File: _Figures/raw_data_3.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_3.jpg>
-Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 473.
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 481.
 (pdftex.def)             Requested size: 167.32521pt x 139.08801pt.
 
 <_Figures/raw_data_4.jpg, id=52, 642.4pt x 428.60126pt>
 File: _Figures/raw_data_4.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_4.jpg>
-Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 479.
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 487.
 (pdftex.def)             Requested size: 167.32521pt x 111.63643pt.
 
 <_Figures/raw_data_5.jpg, id=53, 472.76625pt x 451.6875pt>
 File: _Figures/raw_data_5.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_5.jpg>
-Package pdftex.def Info: _Figures/raw_data_5.jpg used on input line 485.
+Package pdftex.def Info: _Figures/raw_data_5.jpg used on input line 493.
 (pdftex.def)             Requested size: 103.50105pt x 98.8822pt.
  [9 <./_Figures/raw_data_1.jpg> <./_Figures/raw_data_2.jpg> <./_Figures/raw_dat
 a_3.jpg> <./_Figures/raw_data_4.jpg> <./_Figures/raw_data_5.jpg>]
@@ -915,7 +870,7 @@ a_3.jpg> <./_Figures/raw_data_4.jpg> <./_Figures/raw_data_5.jpg>]
 File: _Figures/conv_filter_apply.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_apply.jpg>
-Package pdftex.def Info: _Figures/conv_filter_apply.jpg used on input line 515.
+Package pdftex.def Info: _Figures/conv_filter_apply.jpg used on input line 523.
 
 (pdftex.def)             Requested size: 334.65042pt x 154.79083pt.
 
@@ -923,7 +878,7 @@ Package pdftex.def Info: _Figures/conv_filter_apply.jpg used on input line 515.
 File: _Figures/conv_filter_weight.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_weight.jpg>
-Package pdftex.def Info: _Figures/conv_filter_weight.jpg used on input line 522
+Package pdftex.def Info: _Figures/conv_filter_weight.jpg used on input line 530
 .
 (pdftex.def)             Requested size: 276.00105pt x 60.06036pt.
 
@@ -931,7 +886,7 @@ Package pdftex.def Info: _Figures/conv_filter_weight.jpg used on input line 522
 File: _Figures/conv_filter_kernel.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_kernel.jpg>
-Package pdftex.def Info: _Figures/conv_filter_kernel.jpg used on input line 529
+Package pdftex.def Info: _Figures/conv_filter_kernel.jpg used on input line 537
 .
 (pdftex.def)             Requested size: 334.65042pt x 241.69774pt.
  [10 <./_Figures/conv_filter_apply.jpg> <./_Figures/conv_filter_weight.jpg>]
@@ -939,42 +894,42 @@ Package pdftex.def Info: _Figures/conv_filter_kernel.jpg used on input line 529
 File: _Figures/highpass_class.jpg Graphic file (type jpg)
 
 <use _Figures/highpass_class.jpg>
-Package pdftex.def Info: _Figures/highpass_class.jpg used on input line 541.
+Package pdftex.def Info: _Figures/highpass_class.jpg used on input line 549.
 (pdftex.def)             Requested size: 334.65042pt x 251.98814pt.
  [11 <./_Figures/conv_filter_kernel.jpg>]
 <_Figures/lowpass_class.jpg, id=67, 377.15906pt x 284.56313pt>
 File: _Figures/lowpass_class.jpg Graphic file (type jpg)
 
 <use _Figures/lowpass_class.jpg>
-Package pdftex.def Info: _Figures/lowpass_class.jpg used on input line 552.
+Package pdftex.def Info: _Figures/lowpass_class.jpg used on input line 560.
 (pdftex.def)             Requested size: 334.65042pt x 252.49182pt.
  [12 <./_Figures/highpass_class.jpg>]
 <_Figures/gaussian_class.jpg, id=71, 374.90062pt x 277.035pt>
 File: _Figures/gaussian_class.jpg Graphic file (type jpg)
 
 <use _Figures/gaussian_class.jpg>
-Package pdftex.def Info: _Figures/gaussian_class.jpg used on input line 563.
+Package pdftex.def Info: _Figures/gaussian_class.jpg used on input line 571.
 (pdftex.def)             Requested size: 334.65042pt x 247.30435pt.
  [13 <./_Figures/lowpass_class.jpg>] [14 <./_Figures/gaussian_class.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 []$\OT1/cmr/m/n/10 http : / / northstar-[]www . dartmouth . edu / doc / idl / h
 tml[]6 . 2 / Filtering[]an[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 []$\OT1/cmr/m/n/10 https : / / www . cs . auckland . ac . nz / courses / compsc
 i773s1c / lectures /$
  []
 
 
-Overfull \hbox (65.36206pt too wide) in paragraph at lines 591--592
+Overfull \hbox (65.36206pt too wide) in paragraph at lines 599--600
 []$\OT1/cmr/m/n/10 http : / / www . mathworks . com / help / images / morpholog
 y-[]fundamentals-[]dilation-[]and-[]erosion .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
 []$\OT1/cmr/m/n/10 http : / / www . slideshare . net / vinayaknarayanan /$
  []
 
@@ -989,7 +944,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15561 strings out of 493673
  317213 string characters out of 3143957
- 343465 words of memory out of 3000000
+ 342465 words of memory out of 3000000
  18751 multiletter control sequences out of 15000+200000
  14924 words of font info for 59 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1008,7 +963,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on lab_report_2.pdf (15 pages, 1350376 bytes).
+Output written on lab_report_2.pdf (15 pages, 1351288 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
