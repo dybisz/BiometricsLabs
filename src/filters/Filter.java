@@ -15,15 +15,23 @@ public abstract class Filter {
     Filter(Image inputImage) {
         setInputImage(inputImage);
     }
+    Filter() {};
 
-    protected void setInputImage(Image inputImage) {
+    public void setInputImage(Image inputImage) {
+        checkForNull(inputImage);
         this.inputImage = inputImage;
         this.imageWidth = inputImage.getWidth();
         this.imageHeight = inputImage.getHeight();
         this.outputImage = new WritableImage((int) this.imageWidth, (int) this.imageHeight);
     }
 
-    public abstract WritableImage apply();
+    protected void checkForNull(Object o) {
+        if(o == null) {
+            throw new NullPointerException();
+        }
+    }
+
+    public abstract WritableImage apply() throws Exception;
 
     protected Image getInputImage() {
         return inputImage;

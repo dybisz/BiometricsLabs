@@ -10,6 +10,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import utils.SaveImageToFile;
 
 // tinyurl.com/ns4ca9j
 public class Main extends Application {
@@ -30,9 +31,9 @@ public class Main extends Application {
         });
 
         button.setOnAction((event) -> {
-                imagePreview.saveCurrentPictureToFile();
+            SaveImageToFile.saveCurrentPictureToFile(imagePreview.getImage(), "");
         });
-        VBox vbox = new VBox(/*slider, button, button2*/);
+        VBox vbox = new VBox( button /*button2*/);
 
         root.getChildren().addAll(imagePreview, vbox);
         Scene scene = new Scene(root);
@@ -49,11 +50,11 @@ public class Main extends Application {
     void setupSlider() {
         slider = new Slider();
         slider.setMinorTickCount(100);
-        slider.setMin(0);
-        slider.setMax(255);
+        slider.setMin(0.0);
+        slider.setMax(1.0);
 
         slider.valueProperty().addListener((a,b,c) -> {
-            imagePreview.applyBrightness(slider.getValue());
+            imagePreview.applyTreshold(slider.getValue());
             System.out.println("slider val: " + slider.getValue());
         });
     }

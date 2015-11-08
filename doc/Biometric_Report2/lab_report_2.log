@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  2 NOV 2015 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  7 NOV 2015 21:59
 entering extended mode
 **lab_report_2.tex
 (lab_report_2.tex
@@ -681,43 +681,388 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Warning: Label `fig:caution' multiply defined.
 
 
-LaTeX Warning: Label `fig:sample_4' multiply defined.
+LaTeX Warning: Label `fig:code:blur' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:sample_4' multiply defined.
+LaTeX Warning: Label `fig:code:blur' multiply defined.
 
 
-LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+LaTeX Warning: Label `fig:code:dilation' multiply defined.
 
 
-LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+LaTeX Warning: Label `fig:arrow' multiply defined.
 
 
-LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
 
 
-LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+LaTeX Warning: Label `fig:arrow' multiply defined.
 
 
-LaTeX Warning: Label `fig:code:treshold_func' multiply defined.
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_1_closure' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_1_closure' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_3_closure' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_3_closure' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4' multiply defined.
+
+
+LaTeX Warning: Label `fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:arrow' multiply defined.
+
+
+LaTeX Warning: Label `fig:raw_4_closure' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:raw_4_closure' multiply defined.
+
+
+LaTeX Warning: Label `fig:closure_results' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 62.
+. Activating mapping `default' on line 66.
 .................................................
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -744,23 +1089,21 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c__siunitx_mathsf_int=\count211
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count212
-Missing character: There is no Å in font cmr12!
-Missing character: There is no ‚ in font cmr12!
  [1
 
 {C:/Users/dybisz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (29.65779pt too wide) in paragraph at lines 144--151
+Overfull \hbox (29.65779pt too wide) in paragraph at lines 148--155
 [] 
  []
 
@@ -768,51 +1111,53 @@ Overfull \hbox (29.65779pt too wide) in paragraph at lines 144--151
 File: _Figures/example_11.jpg Graphic file (type jpg)
 
 <use _Figures/example_11.jpg>
-Package pdftex.def Info: _Figures/example_11.jpg used on input line 172.
+Package pdftex.def Info: _Figures/example_11.jpg used on input line 176.
 (pdftex.def)             Requested size: 131.09756pt x 72.20648pt.
 
 <_Figures/example_12.jpg, id=23, 244.66406pt x 137.7647pt>
 File: _Figures/example_12.jpg Graphic file (type jpg)
 
 <use _Figures/example_12.jpg>
-Package pdftex.def Info: _Figures/example_12.jpg used on input line 178.
+Package pdftex.def Info: _Figures/example_12.jpg used on input line 182.
 (pdftex.def)             Requested size: 131.09756pt x 73.82004pt.
  [3 <./_Figures/example_11.jpg> <./_Figures/example_12.jpg>] <_Figures/conv_fil
 ter_border.jpg, id=28, 194.97844pt x 189.70876pt>
 File: _Figures/conv_filter_border.jpg Graphic file (type jpg)
 
 <use _Figures/conv_filter_border.jpg>
-Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 205
+Package pdftex.def Info: _Figures/conv_filter_border.jpg used on input line 209
 .
 (pdftex.def)             Requested size: 103.50105pt x 100.70436pt.
 
 
-Package caption Warning: \label without proper \caption on input line 261.
+Package caption Warning: \label without proper \caption on input line 265.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:caution' on page 4 undefined on input line 211.
+LaTeX Warning: Reference `fig:caution' on page 4 undefined on input line 215.
 
-<_Figures/gaussian.png, id=29, 249.18094pt x 213.04594pt>
+[4 <./_Figures/conv_filter_border.jpg>]
+<_Figures/gaussian.png, id=32, 249.18094pt x 213.04594pt>
 File: _Figures/gaussian.png Graphic file (type png)
 
 <use _Figures/gaussian.png>
-Package pdftex.def Info: _Figures/gaussian.png used on input line 260.
+Package pdftex.def Info: _Figures/gaussian.png used on input line 264.
 (pdftex.def)             Requested size: 103.50105pt x 88.49043pt.
- [4 <./_Figures/conv_filter_border.jpg>] [5 <./_Figures/gaussian.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 353.
+ [5 <./_Figures/gaussian.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 372.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 353.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 372.
 
 <_Figures/struct_el_example.jpg, id=36, 269.50688pt x 73.77562pt>
 File: _Figures/struct_el_example.jpg Graphic file (type jpg)
 
 <use _Figures/struct_el_example.jpg>
-Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 361.
+Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 380.
 
 (pdftex.def)             Requested size: 241.49895pt x 66.10924pt.
  [6]
@@ -820,120 +1165,849 @@ Package pdftex.def Info: _Figures/struct_el_example.jpg used on input line 361.
 File: _Figures/erosion_example.jpg Graphic file (type jpg)
 
 <use _Figures/erosion_example.jpg>
-Package pdftex.def Info: _Figures/erosion_example.jpg used on input line 392.
+Package pdftex.def Info: _Figures/erosion_example.jpg used on input line 411.
 (pdftex.def)             Requested size: 137.9979pt x 69.90771pt.
  [7 <./_Figures/struct_el_example.jpg> <./_Figures/erosion_example.jpg>]
 <_Figures/dilation_example.jpg, id=45, 342.5297pt x 174.6525pt>
 File: _Figures/dilation_example.jpg Graphic file (type jpg)
 
 <use _Figures/dilation_example.jpg>
-Package pdftex.def Info: _Figures/dilation_example.jpg used on input line 416.
+Package pdftex.def Info: _Figures/dilation_example.jpg used on input line 435.
 (pdftex.def)             Requested size: 137.9979pt x 70.3661pt.
  [8 <./_Figures/dilation_example.jpg>]
-<_Figures/raw_data_1.jpg, id=49, 501.875pt x 288.07625pt>
+<_Figures/code/conditional_example.jpg, id=49, 481.04718pt x 347.79938pt>
+File: _Figures/code/conditional_example.jpg Graphic file (type jpg)
+
+<use _Figures/code/conditional_example.jpg>
+Package pdftex.def Info: _Figures/code/conditional_example.jpg used on input li
+ne 499.
+(pdftex.def)             Requested size: 310.4979pt x 224.49605pt.
+ [9 <./_Figures/code/conditional_example.jpg>] <_Figures/raw_data_1.jpg, id=53,
+ 501.875pt x 288.07625pt>
 File: _Figures/raw_data_1.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_1.jpg>
-Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 469.
-(pdftex.def)             Requested size: 167.32521pt x 96.04568pt.
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 518.
+(pdftex.def)             Requested size: 172.5pt x 99.01717pt.
 
-<_Figures/raw_data_2.jpg, id=50, 592.2125pt x 448.67625pt>
-File: _Figures/raw_data_2.jpg Graphic file (type jpg)
-
-<use _Figures/raw_data_2.jpg>
-Package pdftex.def Info: _Figures/raw_data_2.jpg used on input line 475.
-(pdftex.def)             Requested size: 167.32521pt x 126.76497pt.
-
-<_Figures/raw_data_3.jpg, id=51, 642.4pt x 533.995pt>
+<_Figures/raw_data_3.jpg, id=54, 642.4pt x 533.995pt>
 File: _Figures/raw_data_3.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_3.jpg>
-Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 481.
-(pdftex.def)             Requested size: 167.32521pt x 139.08801pt.
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 525.
+(pdftex.def)             Requested size: 172.5pt x 143.39021pt.
 
-<_Figures/raw_data_4.jpg, id=52, 642.4pt x 428.60126pt>
+<_Figures/raw_data_4.jpg, id=55, 642.4pt x 428.60126pt>
 File: _Figures/raw_data_4.jpg Graphic file (type jpg)
 
 <use _Figures/raw_data_4.jpg>
-Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 487.
-(pdftex.def)             Requested size: 167.32521pt x 111.63643pt.
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 532.
+(pdftex.def)             Requested size: 172.5pt x 115.08951pt.
+ [10 <./_Figures/raw_data_1.jpg> <./_Figures/raw_data_3.jpg> <./_Figures/raw_da
+ta_4.jpg>]
+<_Figures/code/conv_filter.jpg, id=59, 450.9347pt x 539.76656pt>
+File: _Figures/code/conv_filter.jpg Graphic file (type jpg)
 
-<_Figures/raw_data_5.jpg, id=53, 472.76625pt x 451.6875pt>
-File: _Figures/raw_data_5.jpg Graphic file (type jpg)
+<use _Figures/code/conv_filter.jpg>
+Package pdftex.def Info: _Figures/code/conv_filter.jpg used on input line 555.
+(pdftex.def)             Requested size: 338.09853pt x 404.7251pt.
+ [11 <./_Figures/code/conv_filter.jpg>]
+<_Figures/code/highpass.jpg, id=63, 303.38344pt x 235.63031pt>
+File: _Figures/code/highpass.jpg Graphic file (type jpg)
 
-<use _Figures/raw_data_5.jpg>
-Package pdftex.def Info: _Figures/raw_data_5.jpg used on input line 493.
-(pdftex.def)             Requested size: 103.50105pt x 98.8822pt.
- [9 <./_Figures/raw_data_1.jpg> <./_Figures/raw_data_2.jpg> <./_Figures/raw_dat
-a_3.jpg> <./_Figures/raw_data_4.jpg> <./_Figures/raw_data_5.jpg>]
-<_Figures/conv_filter_apply.jpg, id=57, 402.00188pt x 185.94469pt>
-File: _Figures/conv_filter_apply.jpg Graphic file (type jpg)
+<use _Figures/code/highpass.jpg>
+Package pdftex.def Info: _Figures/code/highpass.jpg used on input line 568.
+(pdftex.def)             Requested size: 207.0021pt x 160.77658pt.
 
-<use _Figures/conv_filter_apply.jpg>
-Package pdftex.def Info: _Figures/conv_filter_apply.jpg used on input line 523.
+<_Figures/code/lowpass.jpg, id=64, 293.59688pt x 229.60782pt>
+File: _Figures/code/lowpass.jpg Graphic file (type jpg)
 
-(pdftex.def)             Requested size: 334.65042pt x 154.79083pt.
+<use _Figures/code/lowpass.jpg>
+Package pdftex.def Info: _Figures/code/lowpass.jpg used on input line 579.
+(pdftex.def)             Requested size: 207.0021pt x 161.88754pt.
+ [12 <./_Figures/code/highpass.jpg> <./_Figures/code/lowpass.jpg>]
+<_Figures/code/gaussian.jpg, id=68, 295.1025pt x 229.60782pt>
+File: _Figures/code/gaussian.jpg Graphic file (type jpg)
 
-<_Figures/conv_filter_weight.jpg, id=58, 325.215pt x 70.76437pt>
-File: _Figures/conv_filter_weight.jpg Graphic file (type jpg)
+<use _Figures/code/gaussian.jpg>
+Package pdftex.def Info: _Figures/code/gaussian.jpg used on input line 591.
+(pdftex.def)             Requested size: 207.0021pt x 161.06421pt.
 
-<use _Figures/conv_filter_weight.jpg>
-Package pdftex.def Info: _Figures/conv_filter_weight.jpg used on input line 530
+<_Figures/code/sobel_1.jpg, id=69, 490.08093pt x 294.34969pt>
+File: _Figures/code/sobel_1.jpg Graphic file (type jpg)
+
+<use _Figures/code/sobel_1.jpg>
+Package pdftex.def Info: _Figures/code/sobel_1.jpg used on input line 603.
+(pdftex.def)             Requested size: 310.4979pt x 186.49226pt.
+ [13 <./_Figures/code/gaussian.jpg> <./_Figures/code/sobel_1.jpg>]
+<_Figures/code/sobel_2.jpg, id=74, 455.45157pt x 718.93594pt>
+File: _Figures/code/sobel_2.jpg Graphic file (type jpg)
+
+<use _Figures/code/sobel_2.jpg>
+Package pdftex.def Info: _Figures/code/sobel_2.jpg used on input line 612.
+(pdftex.def)             Requested size: 345.0pt x 544.5979pt.
+
+Overfull \vbox (16.5979pt too high) has occurred while \output is active []
+
+
+[14 <./_Figures/code/sobel_2.jpg>]
+<_Figures/code/blur.jpg, id=78, 411.03563pt x 365.11406pt>
+File: _Figures/code/blur.jpg Graphic file (type jpg)
+
+<use _Figures/code/blur.jpg>
+Package pdftex.def Info: _Figures/code/blur.jpg used on input line 625.
+(pdftex.def)             Requested size: 282.90253pt x 251.29385pt.
+
+<_Figures/code/morph_1.jpg, id=79, 466.74374pt x 224.33812pt>
+File: _Figures/code/morph_1.jpg Graphic file (type jpg)
+
+<use _Figures/code/morph_1.jpg>
+Package pdftex.def Info: _Figures/code/morph_1.jpg used on input line 636.
+(pdftex.def)             Requested size: 310.4979pt x 149.24458pt.
+ [15 <./_Figures/code/blur.jpg> <./_Figures/code/morph_1.jpg>] <_Figures/code/m
+orph_2.jpg, id=83, 514.17094pt x 632.3625pt>
+File: _Figures/code/morph_2.jpg Graphic file (type jpg)
+
+<use _Figures/code/morph_2.jpg>
+Package pdftex.def Info: _Figures/code/morph_2.jpg used on input line 647.
+(pdftex.def)             Requested size: 310.4979pt x 381.88094pt.
+ [16 <./_Figures/code/morph_2.jpg>]
+<_Figures/code/erosion.jpg, id=87, 441.14813pt x 192.72pt>
+File: _Figures/code/erosion.jpg Graphic file (type jpg)
+
+<use _Figures/code/erosion.jpg>
+Package pdftex.def Info: _Figures/code/erosion.jpg used on input line 660.
+(pdftex.def)             Requested size: 310.4979pt x 135.65pt.
+
+<_Figures/code/dilation.jpg, id=88, 441.90094pt x 220.57407pt>
+File: _Figures/code/dilation.jpg Graphic file (type jpg)
+
+<use _Figures/code/dilation.jpg>
+Package pdftex.def Info: _Figures/code/dilation.jpg used on input line 672.
+(pdftex.def)             Requested size: 310.4979pt x 154.99315pt.
+ [17 <./_Figures/code/erosion.jpg> <./_Figures/code/dilation.jpg>]
+<_Figures/code/cond_dilation.jpg, id=92, 481.04718pt x 581.92406pt>
+File: _Figures/code/cond_dilation.jpg Graphic file (type jpg)
+
+<use _Figures/code/cond_dilation.jpg>
+Package pdftex.def Info: _Figures/code/cond_dilation.jpg used on input line 684
 .
-(pdftex.def)             Requested size: 276.00105pt x 60.06036pt.
+(pdftex.def)             Requested size: 345.0pt x 417.36006pt.
+ [18 <./_Figures/code/cond_dilation.jpg>]
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
 
-<_Figures/conv_filter_kernel.jpg, id=59, 379.4175pt x 274.02374pt>
-File: _Figures/conv_filter_kernel.jpg Graphic file (type jpg)
+<use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 707.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
 
-<use _Figures/conv_filter_kernel.jpg>
-Package pdftex.def Info: _Figures/conv_filter_kernel.jpg used on input line 537
+<_Figures/leftrightarrow.jpg, id=96, 135.50626pt x 160.34906pt>
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 713.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_highpass.png, id=97, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_highpass.png Graphic file (type png)
+
+<use _Figures/raw_data_1_highpass.png>
+Package pdftex.def Info: _Figures/raw_data_1_highpass.png used on input line 71
+8.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 705--722
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 725.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 731.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_highpass.png, id=99, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_highpass.png Graphic file (type png)
+
+<use _Figures/raw_data_3_highpass.png>
+Package pdftex.def Info: _Figures/raw_data_3_highpass.png used on input line 73
+6.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 723--740
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 744.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 750.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_highpass.png, id=100, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_highpass.png Graphic file (type png)
+
+<use _Figures/raw_data_4_highpass.png>
+Package pdftex.def Info: _Figures/raw_data_4_highpass.png used on input line 75
+5.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 742--759
+ []$[]$$[]$$[]$ 
+ []
+
+[19 <./_Figures/leftrightarrow.jpg> <./_Figures/raw_data_1_highpass.png> <./_Fi
+gures/raw_data_3_highpass.png> <./_Figures/raw_data_4_highpass.png>]
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
+
+<use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 777.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 783.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_lowpass.png, id=108, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_lowpass.png Graphic file (type png)
+
+<use _Figures/raw_data_1_lowpass.png>
+Package pdftex.def Info: _Figures/raw_data_1_lowpass.png used on input line 788
 .
-(pdftex.def)             Requested size: 334.65042pt x 241.69774pt.
- [10 <./_Figures/conv_filter_apply.jpg> <./_Figures/conv_filter_weight.jpg>]
-<_Figures/highpass_class.jpg, id=63, 377.91188pt x 284.56313pt>
-File: _Figures/highpass_class.jpg Graphic file (type jpg)
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
 
-<use _Figures/highpass_class.jpg>
-Package pdftex.def Info: _Figures/highpass_class.jpg used on input line 549.
-(pdftex.def)             Requested size: 334.65042pt x 251.98814pt.
- [11 <./_Figures/conv_filter_kernel.jpg>]
-<_Figures/lowpass_class.jpg, id=67, 377.15906pt x 284.56313pt>
-File: _Figures/lowpass_class.jpg Graphic file (type jpg)
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 775--792
+ []$[]$$[]$$[]$ 
+ []
 
-<use _Figures/lowpass_class.jpg>
-Package pdftex.def Info: _Figures/lowpass_class.jpg used on input line 560.
-(pdftex.def)             Requested size: 334.65042pt x 252.49182pt.
- [12 <./_Figures/highpass_class.jpg>]
-<_Figures/gaussian_class.jpg, id=71, 374.90062pt x 277.035pt>
-File: _Figures/gaussian_class.jpg Graphic file (type jpg)
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 797.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 803.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
 
-<use _Figures/gaussian_class.jpg>
-Package pdftex.def Info: _Figures/gaussian_class.jpg used on input line 571.
-(pdftex.def)             Requested size: 334.65042pt x 247.30435pt.
- [13 <./_Figures/lowpass_class.jpg>] [14 <./_Figures/gaussian_class.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+<_Figures/raw_data_3_lowpass.png, id=109, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_lowpass.png Graphic file (type png)
+
+<use _Figures/raw_data_3_lowpass.png>
+Package pdftex.def Info: _Figures/raw_data_3_lowpass.png used on input line 808
+.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 795--812
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 818.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 824.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_lowpass.png, id=110, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_lowpass.png Graphic file (type png)
+
+<use _Figures/raw_data_4_lowpass.png>
+Package pdftex.def Info: _Figures/raw_data_4_lowpass.png used on input line 829
+.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 816--833
+ []$[]$$[]$$[]$ 
+ []
+
+[20 <./_Figures/raw_data_1_lowpass.png> <./_Figures/raw_data_3_lowpass.png> <./
+_Figures/raw_data_4_lowpass.png>]
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
+ <use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 852.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 858.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_gaussian.png, id=117, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_gaussian.png Graphic file (type png)
+
+<use _Figures/raw_data_1_gaussian.png>
+Package pdftex.def Info: _Figures/raw_data_1_gaussian.png used on input line 86
+3.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 850--867
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 870.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 876.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_gaussian.png, id=118, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_gaussian.png Graphic file (type png)
+
+<use _Figures/raw_data_3_gaussian.png>
+Package pdftex.def Info: _Figures/raw_data_3_gaussian.png used on input line 88
+1.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 868--885
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 889.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 895.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_gaussian.png, id=119, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_gaussian.png Graphic file (type png)
+
+<use _Figures/raw_data_4_gaussian.png>
+Package pdftex.def Info: _Figures/raw_data_4_gaussian.png used on input line 90
+0.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 887--904
+ []$[]$$[]$$[]$ 
+ []
+
+[21 <./_Figures/raw_data_1_gaussian.png> <./_Figures/raw_data_3_gaussian.png> <
+./_Figures/raw_data_4_gaussian.png>]
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
+ <use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 923.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 929.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_sobel.png, id=126, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_sobel.png Graphic file (type png)
+
+<use _Figures/raw_data_1_sobel.png>
+Package pdftex.def Info: _Figures/raw_data_1_sobel.png used on input line 934.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 921--938
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 941.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 947.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_sobel.png, id=127, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_sobel.png Graphic file (type png)
+
+<use _Figures/raw_data_3_sobel.png>
+Package pdftex.def Info: _Figures/raw_data_3_sobel.png used on input line 952.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 939--956
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 960.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 966.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_sobel.png, id=128, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_sobel.png Graphic file (type png)
+
+<use _Figures/raw_data_4_sobel.png>
+Package pdftex.def Info: _Figures/raw_data_4_sobel.png used on input line 971.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 958--975
+ []$[]$$[]$$[]$ 
+ []
+
+[22 <./_Figures/raw_data_1_sobel.png> <./_Figures/raw_data_3_sobel.png> <./_Fig
+ures/raw_data_4_sobel.png>]
+File: _Figures/raw_data_1.jpg Graphic file (type jpg)
+ <use _Figures/raw_data_1.jpg>
+Package pdftex.def Info: _Figures/raw_data_1.jpg used on input line 993.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 999.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_blur.png, id=135, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_blur.png Graphic file (type png)
+
+<use _Figures/raw_data_1_blur.png>
+Package pdftex.def Info: _Figures/raw_data_1_blur.png used on input line 1004.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 991--1008
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3.jpg Graphic file (type jpg)
+<use _Figures/raw_data_3.jpg>
+Package pdftex.def Info: _Figures/raw_data_3.jpg used on input line 1011.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1017.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_blur.png, id=136, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_blur.png Graphic file (type png)
+
+<use _Figures/raw_data_3_blur.png>
+Package pdftex.def Info: _Figures/raw_data_3_blur.png used on input line 1022.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1009--1026
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4.jpg Graphic file (type jpg)
+<use _Figures/raw_data_4.jpg>
+Package pdftex.def Info: _Figures/raw_data_4.jpg used on input line 1030.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1036.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_blur.png, id=137, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_blur.png Graphic file (type png)
+
+<use _Figures/raw_data_4_blur.png>
+Package pdftex.def Info: _Figures/raw_data_4_blur.png used on input line 1041.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1028--1045
+ []$[]$$[]$$[]$ 
+ []
+
+[23 <./_Figures/raw_data_1_blur.png> <./_Figures/raw_data_3_blur.png> <./_Figur
+es/raw_data_4_blur.png>]
+<_Figures/raw_data_1_binary.png, id=144, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_binary.png Graphic file (type png)
+
+<use _Figures/raw_data_1_binary.png>
+Package pdftex.def Info: _Figures/raw_data_1_binary.png used on input line 1072
+.
+(pdftex.def)             Requested size: 123.81902pt x 71.06941pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1078.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_erosion.png, id=145, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_erosion.png Graphic file (type png)
+
+<use _Figures/raw_data_1_erosion.png>
+Package pdftex.def Info: _Figures/raw_data_1_erosion.png used on input line 108
+3.
+(pdftex.def)             Requested size: 123.81902pt x 71.06941pt.
+
+<_Figures/raw_data_3_binary.png, id=146, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_binary.png Graphic file (type png)
+
+<use _Figures/raw_data_3_binary.png>
+Package pdftex.def Info: _Figures/raw_data_3_binary.png used on input line 1090
+.
+(pdftex.def)             Requested size: 123.81902pt x 102.91861pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1096.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_erosion.png, id=147, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_erosion.png Graphic file (type png)
+
+<use _Figures/raw_data_3_erosion.png>
+Package pdftex.def Info: _Figures/raw_data_3_erosion.png used on input line 110
+1.
+(pdftex.def)             Requested size: 123.81902pt x 102.91861pt.
+
+<_Figures/raw_data_4_binary.png, id=148, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_binary.png Graphic file (type png)
+
+<use _Figures/raw_data_4_binary.png>
+Package pdftex.def Info: _Figures/raw_data_4_binary.png used on input line 1109
+.
+(pdftex.def)             Requested size: 123.81902pt x 82.60573pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1115.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_erosion.png, id=149, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_erosion.png Graphic file (type png)
+
+<use _Figures/raw_data_4_erosion.png>
+Package pdftex.def Info: _Figures/raw_data_4_erosion.png used on input line 112
+0.
+(pdftex.def)             Requested size: 123.81902pt x 82.60573pt.
+ [24 <./_Figures/raw_data_1_binary.png> <./_Figures/raw_data_1_erosion.png> <./
+_Figures/raw_data_3_binary.png> <./_Figures/raw_data_3_erosion.png> <./_Figures
+/raw_data_4_binary.png> <./_Figures/raw_data_4_erosion.png>]
+File: _Figures/raw_data_1_binary.png Graphic file (type png)
+ <use _Figures/raw_data_1_binary.png>
+Package pdftex.def Info: _Figures/raw_data_1_binary.png used on input line 1144
+.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1150.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_dilation.png, id=159, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_1_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_1_dilation.png used on input line 11
+55.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1142--1159
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3_binary.png Graphic file (type png)
+<use _Figures/raw_data_3_binary.png>
+Package pdftex.def Info: _Figures/raw_data_3_binary.png used on input line 1162
+.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1168.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_dilation.png, id=160, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_3_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_3_dilation.png used on input line 11
+73.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1160--1177
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4_binary.png Graphic file (type png)
+<use _Figures/raw_data_4_binary.png>
+Package pdftex.def Info: _Figures/raw_data_4_binary.png used on input line 1181
+.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1187.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_dilation.png, id=161, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_4_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_4_dilation.png used on input line 11
+92.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1179--1196
+ []$[]$$[]$$[]$ 
+ []
+
+[25 <./_Figures/raw_data_1_dilation.png> <./_Figures/raw_data_3_dilation.png> <
+./_Figures/raw_data_4_dilation.png>]
+File: _Figures/raw_data_1_binary.png Graphic file (type png)
+ <use _Figures/raw_data_1_binary.png>
+Package pdftex.def Info: _Figures/raw_data_1_binary.png used on input line 1213
+.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1219.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_opening.png, id=169, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_opening.png Graphic file (type png)
+
+<use _Figures/raw_data_1_opening.png>
+Package pdftex.def Info: _Figures/raw_data_1_opening.png used on input line 122
+4.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1211--1228
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3_binary.png Graphic file (type png)
+<use _Figures/raw_data_3_binary.png>
+Package pdftex.def Info: _Figures/raw_data_3_binary.png used on input line 1231
+.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1237.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_opening.png, id=170, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_opening.png Graphic file (type png)
+
+<use _Figures/raw_data_3_opening.png>
+Package pdftex.def Info: _Figures/raw_data_3_opening.png used on input line 124
+2.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1229--1246
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4_binary.png Graphic file (type png)
+<use _Figures/raw_data_4_binary.png>
+Package pdftex.def Info: _Figures/raw_data_4_binary.png used on input line 1250
+.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1256.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_opening.png, id=171, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_opening.png Graphic file (type png)
+
+<use _Figures/raw_data_4_opening.png>
+Package pdftex.def Info: _Figures/raw_data_4_opening.png used on input line 126
+1.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1248--1265
+ []$[]$$[]$$[]$ 
+ []
+
+[26 <./_Figures/raw_data_1_opening.png> <./_Figures/raw_data_3_opening.png> <./
+_Figures/raw_data_4_opening.png>]
+File: _Figures/raw_data_1_binary.png Graphic file (type png)
+ <use _Figures/raw_data_1_binary.png>
+Package pdftex.def Info: _Figures/raw_data_1_binary.png used on input line 1283
+.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+
+<use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1289.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_closure.png, id=178, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_closure.png Graphic file (type png)
+
+<use _Figures/raw_data_1_closure.png>
+Package pdftex.def Info: _Figures/raw_data_1_closure.png used on input line 129
+4.
+(pdftex.def)             Requested size: 157.2861pt x 90.28294pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1281--1298
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_3_binary.png Graphic file (type png)
+<use _Figures/raw_data_3_binary.png>
+Package pdftex.def Info: _Figures/raw_data_3_binary.png used on input line 1301
+.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1307.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_closure.png, id=179, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_closure.png Graphic file (type png)
+
+<use _Figures/raw_data_3_closure.png>
+Package pdftex.def Info: _Figures/raw_data_3_closure.png used on input line 131
+2.
+(pdftex.def)             Requested size: 157.2861pt x 130.74435pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1299--1316
+ []$[]$$[]$$[]$ 
+ []
+
+File: _Figures/raw_data_4_binary.png Graphic file (type png)
+<use _Figures/raw_data_4_binary.png>
+Package pdftex.def Info: _Figures/raw_data_4_binary.png used on input line 1320
+.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1326.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_closure.png, id=180, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_closure.png Graphic file (type png)
+
+<use _Figures/raw_data_4_closure.png>
+Package pdftex.def Info: _Figures/raw_data_4_closure.png used on input line 133
+1.
+(pdftex.def)             Requested size: 157.2861pt x 104.93954pt.
+
+Overfull \hbox (10.34958pt too wide) in paragraph at lines 1318--1335
+ []$[]$$[]$$[]$ 
+ []
+
+[27 <./_Figures/raw_data_1_closure.png> <./_Figures/raw_data_3_closure.png> <./
+_Figures/raw_data_4_closure.png>]
+<_Figures/raw_data_1_sobel_algo.png, id=187, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_sobel_algo.png Graphic file (type png)
+
+<use _Figures/raw_data_1_sobel_algo.png>
+Package pdftex.def Info: _Figures/raw_data_1_sobel_algo.png used on input line 
+1354.
+(pdftex.def)             Requested size: 117.12968pt x 67.23198pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1360.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_1_cond_dilation.png, id=188, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_cond_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_1_cond_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_1_cond_dilation.png used on input li
+ne 1365.
+(pdftex.def)             Requested size: 117.12968pt x 67.23198pt.
+
+<_Figures/raw_data_3_sobel_algo.png, id=189, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_sobel_algo.png Graphic file (type png)
+
+<use _Figures/raw_data_3_sobel_algo.png>
+Package pdftex.def Info: _Figures/raw_data_3_sobel_algo.png used on input line 
+1372.
+(pdftex.def)             Requested size: 117.12968pt x 97.3616pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1378.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_3_cond_dilation.png, id=190, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_cond_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_3_cond_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_3_cond_dilation.png used on input li
+ne 1383.
+(pdftex.def)             Requested size: 117.12968pt x 97.3616pt.
+
+<_Figures/raw_data_4_sobel_algo.png, id=191, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_sobel_algo.png Graphic file (type png)
+
+<use _Figures/raw_data_4_sobel_algo.png>
+Package pdftex.def Info: _Figures/raw_data_4_sobel_algo.png used on input line 
+1391.
+(pdftex.def)             Requested size: 117.12968pt x 78.1455pt.
+File: _Figures/leftrightarrow.jpg Graphic file (type jpg)
+ <use _Figures/leftrightarrow.jpg>
+Package pdftex.def Info: _Figures/leftrightarrow.jpg used on input line 1397.
+(pdftex.def)             Requested size: 30.11731pt x 35.63657pt.
+
+<_Figures/raw_data_4_cond_dilation.png, id=192, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_cond_dilation.png Graphic file (type png)
+
+<use _Figures/raw_data_4_cond_dilation.png>
+Package pdftex.def Info: _Figures/raw_data_4_cond_dilation.png used on input li
+ne 1402.
+(pdftex.def)             Requested size: 117.12968pt x 78.1455pt.
+ [28 <./_Figures/raw_data_1_sobel_algo.png> <./_Figures/raw_data_1_cond_dilatio
+n.png> <./_Figures/raw_data_3_sobel_algo.png> <./_Figures/raw_data_3_cond_dilat
+ion.png> <./_Figures/raw_data_4_sobel_algo.png> <./_Figures/raw_data_4_cond_dil
+ation.png>]
+<_Figures/algorithm_flow.jpg, id=202, 265.74281pt x 124.21407pt>
+File: _Figures/algorithm_flow.jpg Graphic file (type jpg)
+
+<use _Figures/algorithm_flow.jpg>
+Package pdftex.def Info: _Figures/algorithm_flow.jpg used on input line 1423.
+(pdftex.def)             Requested size: 276.00105pt x 129.01845pt.
+
+<_Figures/raw_data_1_algo_results.png, id=203, 501.875pt x 288.07625pt>
+File: _Figures/raw_data_1_algo_results.png Graphic file (type png)
+
+<use _Figures/raw_data_1_algo_results.png>
+Package pdftex.def Info: _Figures/raw_data_1_algo_results.png used on input lin
+e 1430.
+(pdftex.def)             Requested size: 345.0pt x 198.03873pt.
+
+<_Figures/raw_data_3_algo_results.png, id=204, 642.4pt x 533.995pt>
+File: _Figures/raw_data_3_algo_results.png Graphic file (type png)
+
+<use _Figures/raw_data_3_algo_results.png>
+Package pdftex.def Info: _Figures/raw_data_3_algo_results.png used on input lin
+e 1437.
+(pdftex.def)             Requested size: 276.00105pt x 229.43411pt.
+ [29 <./_Figures/algorithm_flow.jpg> <./_Figures/raw_data_1_algo_results.png>]
+<_Figures/raw_data_4_algo_results.png, id=209, 642.4pt x 428.60126pt>
+File: _Figures/raw_data_4_algo_results.png Graphic file (type png)
+
+<use _Figures/raw_data_4_algo_results.png>
+Package pdftex.def Info: _Figures/raw_data_4_algo_results.png used on input lin
+e 1444.
+(pdftex.def)             Requested size: 276.00105pt x 184.15106pt.
+ [30 <./_Figures/raw_data_3_algo_results.png> <./_Figures/raw_data_4_algo_resul
+ts.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
 []$\OT1/cmr/m/n/10 http : / / northstar-[]www . dartmouth . edu / doc / idl / h
 tml[]6 . 2 / Filtering[]an[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1468
 []$\OT1/cmr/m/n/10 https : / / www . cs . auckland . ac . nz / courses / compsc
 i773s1c / lectures /$
  []
 
 
-Overfull \hbox (65.36206pt too wide) in paragraph at lines 599--600
+Overfull \hbox (65.36206pt too wide) in paragraph at lines 1468--1469
 []$\OT1/cmr/m/n/10 http : / / www . mathworks . com / help / images / morpholog
 y-[]fundamentals-[]dilation-[]and-[]erosion .$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 1469--1470
 []$\OT1/cmr/m/n/10 http : / / www . slideshare . net / vinayaknarayanan /$
  []
 
-[15] (lab_report_2.aux)
+[31] (lab_report_2.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -942,10 +2016,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15561 strings out of 493673
- 317213 string characters out of 3143957
- 342465 words of memory out of 3000000
- 18751 multiletter control sequences out of 15000+200000
+ 15881 strings out of 493673
+ 326482 string characters out of 3143957
+ 358432 words of memory out of 3000000
+ 19026 multiletter control sequences out of 15000+200000
  14924 words of font info for 59 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  53i,16n,92p,10440b,656s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -963,9 +2037,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on lab_report_2.pdf (15 pages, 1351288 bytes).
+Output written on lab_report_2.pdf (31 pages, 12100200 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

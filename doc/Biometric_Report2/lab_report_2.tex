@@ -36,6 +36,10 @@
 \usepackage{caption}
 \usepackage{wrapfig}
 \usepackage{subcaption}
+
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+
 \urlstyle{same}  % (for bibliography links
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 %\usepackage{array}
@@ -55,7 +59,7 @@
 
 \title{Analysis and Processing of Biometric Images \\ Laboratory 3} % Title
 
-\author{Bartłomiej \textsc{Dybisz}} % Author name
+\author{Bartlomiej \textsc{Dybisz}} % Author name
 
 \date{\today} % Date for the report
 
@@ -212,7 +216,7 @@ In this way pixel of output image, positioned at $(4,3)$ will have value $205$. 
 \end{minipage}
 \end{figure}
 
-\textcolor{red}{Remark:} If not stated otherwise, for the rest of the paper we will use only $3 \times 3$ kernel matrices, hence $k_1 = k_3 = -1$ and $k_2 = k_4 = 1$.
+\textcolor{red}{Remark:} If not stated otherwise, for the rest of the paper we will use only $3 \times 3$ kernel matrices, hence $k_1 = k_3 = -1$ and $k_2 = k_4 = 1$ and we will apply it to each RGB channel separately. 
 
 %
 % HIG PASS FILTER DEFINITION
@@ -323,19 +327,34 @@ px_{out} = \sqrt{G_x^2 + G_y^2}
 \item[Blur Filter]
 Due to the demands of the task of pupil extraction, I needed some tool to blur an image to a higher degree than $3 \times 3$ Low Pass Filter or $3 \times 3$ Gaussian filter can. What is more, I could not allowed myself to not process border pixels. Because of all of this requirements simple extension to Low Pass Filter has been made.
 
-Kernel is as follows:
+Kernel of size $15 \times 15$ and looks as follows:
+ 
 \[
-\begin{pmatrix}
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 \\
-  1 & 1 & 1 & 1 & 1 & 1 &1 
- \end{pmatrix}
- \]
-with coefficient $d = \frac{1}{49 - \sigma}$, where $\sigma$ is number of pixels that can not be processed due to border case. In other words, for pixel of interest $px$, $\sigma$ represents number of $f[x,y]$ values for, which there is no corresponding $g[x,y]$ value (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
+\left(
+    \scalemath{0.5}{
+    \begin{array}{ccccccccccccccc}
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+     1 & 1 & 1 & 1 & 1 & 1 &1 & 1 & 1 & 1 & 1 & 1 & 1 &1 &1\\
+    \end{array}
+    }
+  \right)
+\] 
+ 
+
+with coefficient $d = \frac{1}{225 - \sigma}$, where $\sigma$ is number of pixels that can not be processed due to border case. In other words, for pixel of interest $px$, $\sigma$ represents number of $f[x,y]$ values for, which there is no corresponding $g[x,y]$ value (see equation \ref{final_two_var_conv_one_var_disc} and "Convolution Filters" subsection for a reference). 
 
 %
 % MORPHOLOGICAL IMAGE PROCESSING DEFINITION
@@ -437,20 +456,52 @@ In addition, opening is an idempotent operation: once an image has been opened, 
 %
 % CLOSING DEFINITION
 %
-\item[Closing] The closing of an image $f$  by a structuring element $s$ (denoted by $f \bullet s$) is a dilation followed by an erosion: 
+\item[Closure] The closure of an image $f$  by a structuring element $s$ (denoted by $f \bullet s$) is a dilation followed by an erosion: 
 \[
 f \bullet s = (f \oplus s_{rot}) \ominus s_{rot}
 \]
 , where $s_{rot}$ denotes structuring element rotated by $180^{o}$. In most cases $s$ will be symmetrical though.
 
-Closing is so called because it can fill holes in the regions while keeping the initial region sizes. Like opening, closing is idempotent \cite{morphological}:
+Closure is so called because it can fill holes in the regions while keeping the initial region sizes. Like opening, closing is idempotent \cite{morphological}:
 \[
 (f \bullet s) \bullet s = f \bullet s
 \]
+
+\pagebreak
 %
 % REGION FILLING ALGORITHM DEFINITION
 %
+
 \item[Region Filling (Conditional Dilation)]
+Let us assume that we have a region $A$ and its boundary $\beta (A)$. By $A^{C}$ we will mean operation of reversing values of $A$ - if some pixel of $A$ has value 1, on $A^{C}$ its value will be 0 and vice versa. We also have pixel $x = X_{0}$, which is inside $\beta (A)$. As usual we denote structuring element as $s$ and its values are:
+\[
+\begin{pmatrix}
+  0 & 1 & 0 \\
+  1 & 1 & 1 \\
+  0 & 1 & 0 \\
+ \end{pmatrix}
+ \]
+
+
+Next steps of the algorithm are defined as follows:
+\[
+X_{k} = (x_{k-1} \oplus s) \cap A^{C}, \; \; \; \text{for  } k = 1,2,3,\cdots
+\]
+, until $X_k = X_{k-1}$. Then we obtain filled region with following operation:
+\[
+A \cup X_k
+\]
+
+Figure \ref{fig:conditional_dilation_example} gives an example of algorithm work.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/conditional_example.jpg}
+    \caption{Example of steps of Conditional Dilation algorithm.}
+    \label{fig:conditional_dilation_example}
+\end{figure}
+
+
 
 \end{description} 
 \pagebreak
@@ -459,133 +510,951 @@ Closing is so called because it can fill holes in the regions while keeping the 
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 
-\section{Experimental Data}
-During laboratory we used only one image (i.e. \ref{fig:sample_1}), but to enrich this report I will use another four of them. Since final task was to find pupil, I decided that all data will present human eyes.
+\section{Experimental Data} \label{experimental_data}
+During laboratory we used only one image (i.e. \ref{fig:experimental_data_1}), but to enrich this report I will use another two of them. Since final task was to find pupil, I decided that all data will present human eyes. See figure \ref{fig:experimental_data_1}, \ref{fig:experimental_data_2}, \ref{fig:experimental_data_3}.
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
-  \caption{}
-  \label{fig:sample_1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_2.jpg}
-    \caption{}
-  \label{fig:sample_2}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
-  \caption{}
-  \label{fig:sample_3}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
-    \caption{}
-  \label{fig:sample_4}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=0.6\linewidth]{_Figures/raw_data_5.jpg}
-    \caption{}
-  \label{fig:sample_4}
-\end{subfigure}
-\caption{Images used to check implemented algorithms.}
-\label{fig:double_samples}
+\includegraphics[width=0.5\textwidth]{_Figures/raw_data_1.jpg}\hfill
+\caption{Experimental data.}
+\label{fig:experimental_data_1}
 \end{figure}
 
-\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{_Figures/raw_data_3.jpg}\hfill
+\caption{cnd. Experimental data.}
+\label{fig:experimental_data_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{_Figures/raw_data_4.jpg}\hfill
+\caption{cnd. Experimental data.}
+\label{fig:experimental_data_3}
+\end{figure}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
 %----------------------------------------------------------------------------------------
-
 \newpage
 \section{Sample Code}
 This section contains code snippets with algorithms implementation. Each figures is provided with appropriate description either in caption or in method's comment. 
-
-%
-% CLASS DIAGRAM
-%
-\subsection{Operations Class Diagram}
 
 
 %
 % CONVOLUTION FILTER CODE
 %
-\subsection{Convolution Filter Implementation}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.97\textwidth]{_Figures/conv_filter_apply.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
-\end{figure}
 
+\subsection{Convolution Filter Implementation} \label{conv_filter_impl}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{_Figures/conv_filter_weight.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.97\textwidth]{_Figures/conv_filter_kernel.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
+	\includegraphics[width=0.98\textwidth]{_Figures/code/conv_filter.jpg}
+    \caption{Most important methods of ConvolutionFilter class.}
+    \label{fig:code:conv_filter}
 \end{figure}
 
 
+\newpage
 %
 % HIGH PASS CODE
 %
-\subsection{High Pass Filter Implementation}
+\subsection{High Pass Filter Implementation} \label{high_pass_impl}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.97\textwidth]{_Figures/highpass_class.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
+	\includegraphics[width=0.6\textwidth]{_Figures/code/highpass.jpg}
+    \caption{Implementation of HighPassFilter class.}
+    \label{fig:code:highpass}
 \end{figure}
 
 %
 % LOW PASS CODE
-%
-\subsection{Low Pass Filter Implementation}
+% 
+\subsection{Low Pass Filter Implementation} \label{low_pass_impl}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.97\textwidth]{_Figures/lowpass_class.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
+	\includegraphics[width=0.6\textwidth]{_Figures/code/lowpass.jpg}
+    \caption{Implementation of LowPassFilter class.}
+    \label{fig:code:lowpass}
 \end{figure}
 
+\newpage
 %
 % GAUSSIAN FILTER CODE
 %
-\subsection{Gaussian Filter Implementation}
+\subsection{Gaussian Filter Implementation} \label{gaussian_impl}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.97\textwidth]{_Figures/gaussian_class.jpg}
-    \caption{Auxiliary method and fields value of HighPassFilter class.}
-    \label{fig:code:treshold_func}
+	\includegraphics[width=0.6\textwidth]{_Figures/code/gaussian.jpg}
+    \caption{Implementation of GaussianFilter class.}
+    \label{fig:code:gaussian}
+\end{figure}
+
+%
+% SOBEL FILTER
+%
+\subsection{Sobel Filter Implementation} \label{sobel_impl}
+In this case I had to override $calculateKernel$ method, because the filter does not depend on kernel matrix in sense defined in section \ref{definitions}. Other presented methods are just auxillary 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/sobel_1.jpg}
+    \caption{Methods relevant to Sobel filter implementation.}
+    \label{fig:code:sobel_1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{_Figures/code/sobel_2.jpg}
+    \caption{cnd. Methods relevant to Sobel filter implementation.}
+    \label{fig:code:dobel_2}
+\end{figure}
+
+\newpage
+
+%
+% BLUR FILTER
+%
+\subsection{Blur Filter Implementation} \label{blur_impl}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.82\textwidth]{_Figures/code/blur.jpg}
+    \caption{Methods relevant to Blur filter implementation.}
+    \label{fig:code:blur}
+\end{figure}
+
+%
+% MORPHOLOGICAL OPERATION
+%
+\subsection{Morphological Implementation} \label{morph_impl}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/morph_1.jpg}
+    \caption{Methods relevant to MorphologicalOperation class implementation.}
+    \label{fig:code:blur}
 \end{figure}
 
 
+\newpage
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/morph_2.jpg}
+    \caption{cnd. Methods relevant to MorphologicalOperation class implementation.}
+    \label{fig:code:blur}
+\end{figure}
+
+
+\newpage
+%
+% EROSION OPERATION
+%
+\subsection{Erosion Implementation} \label{erosion_impl}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/erosion.jpg}
+    \caption{Methods relevant to Erosion implementation}
+    \label{fig:code:erosion}
+\end{figure}
+
+
+%
+% DILATION OPERATION
+%
+\subsection{Dilation Implementation} \label{dilation_impl}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{_Figures/code/dilation.jpg}
+    \caption{Methods relevant to Dilation implementation}
+    \label{fig:code:dilation}
+\end{figure}
+
+\newpage
+%
+% CONDITIONAL DILTION 
+%
+\subsection{Conditional Dilation Implementation} \label{cond_dil_impl}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{_Figures/code/cond_dilation.jpg}
+    \caption{Most interesting methods of Condition Dilation implementation.}
+    \label{fig:code:dilation}
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %----------------------------------------------------------------------------------------
-
+\newpage
 \section{Results and Conclusions}
 
+%
+% HIGHPASS RESULTS
+%
+
+\subsection{High Pass Filter Results}
+High Pass filter as described in section \ref{definitions} has been applied to each RGB channel of experimental data (section \ref{experimental_data}). Implementation of method is presented in subsection \ref{high_pass_impl}.
+
+As one can see, original pixels with higher saturation are now emphasised.
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_highpass.png}
+  \caption{}
+  \label{fig:raw_1_highpass}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_highpass.png}
+  \caption{}
+  \label{fig:raw_3_highpass}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_highpass.png}
+  \caption{}
+  \label{fig:raw_4_highpass}
+\end{subfigure}
+
+\caption{Results of applying High Pass filter. }
+\label{fig:highpass_results}
+\end{figure}
+
+%
+% LOWPASS RESULTS
+%
+\newpage
+\subsection{Low Pass Filter Results}
+Low Pass filter as described in section \ref{definitions} has been applied to each RGB channel of experimental data (section \ref{experimental_data}). Implementation of method is presented in subsection \ref{low_pass_impl}.
+
+As one can see, images are blurred a little bit.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_lowpass.png}
+  \caption{}
+  \label{fig:raw_1_lowpass}
+\end{subfigure}
+
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_lowpass.png}
+  \caption{}
+  \label{fig:raw_3_lowpass}
+\end{subfigure}
+
+
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_lowpass.png}
+  \caption{}
+  \label{fig:raw_4_lowpass}
+\end{subfigure}
+
+\caption{Results of applying Low Pass filter. }
+\label{fig:lowhpass_results}
+\end{figure}
+
+
+%
+% GAUSSIAN RESULTS
+%
+\newpage
+\subsection{Gaussian Filter Results}
+Gaussian filter as described in section \ref{definitions} has been applied to each RGB channel of experimental data (section \ref{experimental_data}). Implementation of method is presented in subsection \ref{gaussian_impl}.
+
+Again, image has been blurred. Effect is not so visible because of small kernel.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_gaussian.png}
+  \caption{}
+  \label{fig:raw_1_gaussian}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_gaussian.png}
+  \caption{}
+  \label{fig:raw_3_gaussian}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_gaussian.png}
+  \caption{}
+  \label{fig:raw_4_gaussian}
+\end{subfigure}
+
+\caption{Results of applying Gaussian filter. }
+\label{fig:gaussian_results}
+\end{figure}
+
+%
+% SOBEL RESULTS
+%
+\newpage
+\subsection{Sobel Filter Results}
+Sobel filter as described in section \ref{definitions} has been applied to each RGB channel of experimental data (section \ref{experimental_data}). Implementation of method is presented in subsection \ref{gaussian_impl}.
+
+In this case results are far more interesting. Sobel filter revealed edges. Figure \ref{fig:special} looks cool.
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_sobel.png}
+  \caption{}
+  \label{fig:raw_1_sobel}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_sobel.png}
+  \caption{}
+  \label{fig:special}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_sobel.png}
+  \caption{}
+  \label{fig:raw_4_sobel}
+\end{subfigure}
+
+\caption{Results of applying Sobel filter. }
+\label{fig:sobel_results}
+\end{figure}
+
+%
+% BLUR RESULTS
+%
+\newpage
+\subsection{Blur Filter Results}
+Blur filter as described in section \ref{definitions} has been applied to each RGB channel of experimental data (section \ref{experimental_data}). Implementation of method is presented in subsection \ref{blur_impl}
+
+In this case results are far more interesting. Images has been more blurred than in case of Gaussian/Low Pass filter. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1.jpg}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_blur.png}
+  \caption{}
+  \label{fig:raw_1_blur}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3.jpg}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_blur.png}
+  \caption{}
+  \label{fig:raw_3_blur}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4.jpg}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_blur.png}
+  \caption{}
+  \label{fig:raw_4_blur}
+\end{subfigure}
+
+\caption{Results of applying Blur filter. }
+\label{fig:blur_results}
+\end{figure}
+
+%
+% EROSION RESULTS
+%
+\newpage
+\subsection{Erosion Operation Results} \label{erosion_results}
+\textcolor{red}{Remark:} to the end of this section as an input image we will use binarized experimental data. Binarization is done via applying grayscale filter followed by tresholding at level 10. In addition default structuring element will be used to perform morphological operations:
+\[
+\begin{pmatrix}
+  1 & 1 & 1 \\
+  1 & 1 & 1 \\
+  1 & 1 & 1  \\
+ \end{pmatrix}
+ \]
+ 
+To elevate visibility of the operation, erosion has been applied 3 times.
+
+In this case results are far more interesting. It is easily observable that white regions are starting to bulge.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_binary.png}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_erosion.png}
+  \caption{}
+  \label{fig:raw_1_erosion}
+\end{subfigure}
+
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_binary.png}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_erosion.png}
+  \caption{}
+  \label{fig:raw_3_erosion}
+\end{subfigure}
+
+
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_binary.png}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.37\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_erosion.png}
+  \caption{}
+  \label{fig:raw_4_erosion}
+\end{subfigure}
+
+\caption{Results of applying Erosion operation. }
+\label{fig:erosion_results}
+\end{figure}
+
+%
+% DILATION RESULTS
+%
+\newpage
+\subsection{Dilation Operation Results}
+See remark in section \ref{erosion_results} for information about input image and structuring element settings.
+ 
+To elevate visibility of the operation, erosion has been applied 3 times.
+
+In this case results are far more interesting. One can observe that regions are vanishing and shrinking.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_binary.png}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_dilation.png}
+  \caption{}
+  \label{fig:raw_1_dilation}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_binary.png}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_dilation.png}
+  \caption{}
+  \label{fig:raw_3_dilation}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_binary.png}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_dilation.png}
+  \caption{}
+  \label{fig:raw_4_dilation}
+\end{subfigure}
+
+\caption{Results of applying Dilation operation. }
+\label{fig:dilation_results}
+\end{figure}
+
+
+%
+% OPENING RESULTS
+%
+\newpage
+\subsection{Opening Operation Results}
+See remark in section \ref{erosion_results} for information about input image and structuring element settings.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_binary.png}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_opening.png}
+  \caption{}
+  \label{fig:raw_1_opening}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_binary.png}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_opening.png}
+  \caption{}
+  \label{fig:raw_3_opening}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_binary.png}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_opening.png}
+  \caption{}
+  \label{fig:raw_4_opening}
+\end{subfigure}
+
+\caption{Results of applying Opening operation. }
+\label{fig:opening_results}
+\end{figure}
+
+
+
+%
+% CLOSURE RESULTS
+%
+\newpage
+\subsection{Closure Operation Results}
+See remark in section \ref{erosion_results} for information about input image and structuring element settings.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_binary.png}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_closure.png}
+  \caption{}
+  \label{fig:raw_1_closure}
+\end{subfigure}
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_binary.png}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_closure.png}
+  \caption{}
+  \label{fig:raw_3_closure}
+\end{subfigure}
+
+
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_binary.png}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.47\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_closure.png}
+  \caption{}
+  \label{fig:raw_4_closure}
+\end{subfigure}
+
+\caption{Results of applying Closure operation. }
+\label{fig:closure_results}
+\end{figure}
+
+
+%
+% CONDITIONAL DILATION RESULTS
+%
+\newpage
+\subsection{Conditional Dilation Results}
+See remark in section \ref{erosion_results} for information about input image and structuring element settings. In addition I have used Sobel filter on input images to extract edges. All images has been seeded (with regard to conditional dilation) in upper right corner. Simply I have assumed that pupil will never be in this place of an image.
+
+As one can see conditional dilation works very well. Only drawback of this method is \textcolor{red}{long computation time}. There is no way to do this online. Another option would be filling region of pupil instead of background but it may happen that pupil region has some weird internal structure e.g. full of smaller regions. In such a case not whole pupil region would be extracted.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_sobel_algo.png}
+  \caption{}
+  \label{fig:raw_1}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_1_cond_dilation.png}
+  \caption{}
+  \label{fig:raw_1_closure}
+\end{subfigure}
+
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_sobel_algo.png}
+  \caption{}
+  \label{fig:raw_3}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_3_cond_dilation.png}
+  \caption{}
+  \label{fig:raw_3_closure}
+\end{subfigure}
+
+
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_sobel_algo.png}
+  \caption{}
+  \label{fig:raw_4}
+\end{subfigure}%
+\begin{subfigure}{.09\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/leftrightarrow.jpg}
+  \label{fig:arrow}
+\end{subfigure}%
+\begin{subfigure}{.35\textwidth}
+  \centering
+  \includegraphics[width=0.97\linewidth]{_Figures/raw_data_4_cond_dilation.png}
+  \caption{}
+  \label{fig:raw_4_closure}
+\end{subfigure}
+
+\caption{Results of applying Conditional Dilation. }
+\label{fig:closure_results}
+\end{figure}
+
+
+
+
+%
+% PUPIL EXTRACTION RESULTS
+%
+\newpage
+\subsection{Pupil Extraction Results}
+Consecutive steps of my algorithm has been depicted on figure \ref{fig:algo_flow}. At the $Features extraction$ phase, diameter and pupil center have been extracted. A way to do this is finding longest, horizontal black line on an image. Line itself is diameter and center of the pupil its center of diameter. Results have been saved on original image for clarity; figures \ref{fig:results_1}, \ref{fig:results_2}, \ref{fig:results_3}. Red line indicates diameter and white dot its centre of pupil.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{_Figures/algorithm_flow.jpg}
+  \caption{Pupil diameter/center extraction algorithm flow.}
+  \label{fig:algo_flow}
+\end{figure}%
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{_Figures/raw_data_1_algo_results.png}\hfill
+\caption{Pupil diameter and center extraction from experimental data.}
+\label{fig:results_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{_Figures/raw_data_3_algo_results.png}\hfill
+\caption{Pupil diameter and center extraction from experimental data.}
+\label{fig:results_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{_Figures/raw_data_4_algo_results.png}\hfill
+\caption{Pupil diameter and center extraction from experimental data.}
+\label{fig:results_3}
+\end{figure}
+
+\newpage
+\subsection{Conclusions}
+In my opinion results of the pupil extraction algorithm are quite satisfying. In all three cases pupil has been localized correctly. Diameters and centers also seems all right. Only drawback of presented method is time needed to compute Conditional Dilation. This problem can be workaround using e.g. flood fill algorithm, which is much faster. There is sadly no recipe, which comes into my mind, fo making this approach work in real-time.
+
+As for other filters, thoughts has been shared during presenting results for each one of them.
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\newpage
 
 \begin{thebibliography}{1}
 	\bibitem{convolution_wolphram} \url{http://mathworld.wolfram.com/Convolution.html}

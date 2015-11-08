@@ -19,11 +19,11 @@
 \citation{high_pass_def}
 \citation{high_pass_def}
 \citation{gaussian_blur}
-\citation{gaussian_blur}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \relax }}{4}}
 \newlabel{fig:caution}{{2}{4}}
+\citation{gaussian_blur}
 \citation{sobel_bib1}
-\newlabel{fig:caution}{{\caption@xref {fig:caution}{ on input line 261}}{5}}
+\newlabel{fig:caution}{{\caption@xref {fig:caution}{ on input line 265}}{5}}
 \citation{morph_wiki}
 \citation{morphological}
 \citation{morphological}
@@ -41,38 +41,282 @@
 \citation{morphological}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example of dilation.\relax }}{8}}
 \newlabel{fig:dilation_exampl}{{5}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Experimental Data}{9}}
-\newlabel{fig:sample_1}{{6a}{9}}
-\newlabel{sub@fig:sample_1}{{a}{9}}
-\newlabel{fig:sample_2}{{6b}{9}}
-\newlabel{sub@fig:sample_2}{{b}{9}}
-\newlabel{fig:sample_3}{{6c}{9}}
-\newlabel{sub@fig:sample_3}{{c}{9}}
-\newlabel{fig:sample_4}{{6d}{9}}
-\newlabel{sub@fig:sample_4}{{d}{9}}
-\newlabel{fig:sample_4}{{6e}{9}}
-\newlabel{sub@fig:sample_4}{{e}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Images used to check implemented algorithms.\relax }}{9}}
-\newlabel{fig:double_samples}{{6}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Sample Code}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Operations Class Diagram}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Convolution Filter Implementation}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{10}}
-\newlabel{fig:code:treshold_func}{{7}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{10}}
-\newlabel{fig:code:treshold_func}{{8}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{11}}
-\newlabel{fig:code:treshold_func}{{9}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}High Pass Filter Implementation}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{12}}
-\newlabel{fig:code:treshold_func}{{10}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Low Pass Filter Implementation}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{13}}
-\newlabel{fig:code:treshold_func}{{11}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Gaussian Filter Implementation}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Auxiliary method and fields value of HighPassFilter class.\relax }}{14}}
-\newlabel{fig:code:treshold_func}{{12}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results and Conclusions}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Example of steps of Conditional Dilation algorithm.\relax }}{9}}
+\newlabel{fig:conditional_dilation_example}{{6}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Experimental Data}{10}}
+\newlabel{experimental_data}{{2}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Experimental data.\relax }}{10}}
+\newlabel{fig:experimental_data_1}{{7}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces cnd. Experimental data.\relax }}{10}}
+\newlabel{fig:experimental_data_2}{{8}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces cnd. Experimental data.\relax }}{10}}
+\newlabel{fig:experimental_data_3}{{9}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Sample Code}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Convolution Filter Implementation}{11}}
+\newlabel{conv_filter_impl}{{3.1}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Most important methods of ConvolutionFilter class.\relax }}{11}}
+\newlabel{fig:code:conv_filter}{{10}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}High Pass Filter Implementation}{12}}
+\newlabel{high_pass_impl}{{3.2}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Implementation of HighPassFilter class.\relax }}{12}}
+\newlabel{fig:code:highpass}{{11}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Low Pass Filter Implementation}{12}}
+\newlabel{low_pass_impl}{{3.3}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Implementation of LowPassFilter class.\relax }}{12}}
+\newlabel{fig:code:lowpass}{{12}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Gaussian Filter Implementation}{13}}
+\newlabel{gaussian_impl}{{3.4}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Implementation of GaussianFilter class.\relax }}{13}}
+\newlabel{fig:code:gaussian}{{13}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Sobel Filter Implementation}{13}}
+\newlabel{sobel_impl}{{3.5}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Methods relevant to Sobel filter implementation.\relax }}{13}}
+\newlabel{fig:code:sobel_1}{{14}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces cnd. Methods relevant to Sobel filter implementation.\relax }}{14}}
+\newlabel{fig:code:dobel_2}{{15}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Blur Filter Implementation}{15}}
+\newlabel{blur_impl}{{3.6}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Methods relevant to Blur filter implementation.\relax }}{15}}
+\newlabel{fig:code:blur}{{16}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Morphological Implementation}{15}}
+\newlabel{morph_impl}{{3.7}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Methods relevant to MorphologicalOperation class implementation.\relax }}{15}}
+\newlabel{fig:code:blur}{{17}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces cnd. Methods relevant to MorphologicalOperation class implementation.\relax }}{16}}
+\newlabel{fig:code:blur}{{18}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Erosion Implementation}{17}}
+\newlabel{erosion_impl}{{3.8}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Methods relevant to Erosion implementation\relax }}{17}}
+\newlabel{fig:code:erosion}{{19}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Dilation Implementation}{17}}
+\newlabel{dilation_impl}{{3.9}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Methods relevant to Dilation implementation\relax }}{17}}
+\newlabel{fig:code:dilation}{{20}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Conditional Dilation Implementation}{18}}
+\newlabel{cond_dil_impl}{{3.10}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Most interesting methods of Condition Dilation implementation.\relax }}{18}}
+\newlabel{fig:code:dilation}{{21}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results and Conclusions}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}High Pass Filter Results}{19}}
+\newlabel{fig:raw_1}{{22a}{19}}
+\newlabel{sub@fig:raw_1}{{a}{19}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 714}}{19}}
+\newlabel{sub@fig:arrow}{{a}{19}}
+\newlabel{fig:raw_1_highpass}{{22b}{19}}
+\newlabel{sub@fig:raw_1_highpass}{{b}{19}}
+\newlabel{fig:raw_3}{{22c}{19}}
+\newlabel{sub@fig:raw_3}{{c}{19}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 732}}{19}}
+\newlabel{sub@fig:arrow}{{c}{19}}
+\newlabel{fig:raw_3_highpass}{{22d}{19}}
+\newlabel{sub@fig:raw_3_highpass}{{d}{19}}
+\newlabel{fig:raw_4}{{22e}{19}}
+\newlabel{sub@fig:raw_4}{{e}{19}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 751}}{19}}
+\newlabel{sub@fig:arrow}{{e}{19}}
+\newlabel{fig:raw_4_highpass}{{22f}{19}}
+\newlabel{sub@fig:raw_4_highpass}{{f}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Results of applying High Pass filter. \relax }}{19}}
+\newlabel{fig:highpass_results}{{22}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Low Pass Filter Results}{20}}
+\newlabel{fig:raw_1}{{23a}{20}}
+\newlabel{sub@fig:raw_1}{{a}{20}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 784}}{20}}
+\newlabel{sub@fig:arrow}{{a}{20}}
+\newlabel{fig:raw_1_lowpass}{{23b}{20}}
+\newlabel{sub@fig:raw_1_lowpass}{{b}{20}}
+\newlabel{fig:raw_3}{{23c}{20}}
+\newlabel{sub@fig:raw_3}{{c}{20}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 804}}{20}}
+\newlabel{sub@fig:arrow}{{c}{20}}
+\newlabel{fig:raw_3_lowpass}{{23d}{20}}
+\newlabel{sub@fig:raw_3_lowpass}{{d}{20}}
+\newlabel{fig:raw_4}{{23e}{20}}
+\newlabel{sub@fig:raw_4}{{e}{20}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 825}}{20}}
+\newlabel{sub@fig:arrow}{{e}{20}}
+\newlabel{fig:raw_4_lowpass}{{23f}{20}}
+\newlabel{sub@fig:raw_4_lowpass}{{f}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Results of applying Low Pass filter. \relax }}{20}}
+\newlabel{fig:lowhpass_results}{{23}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Gaussian Filter Results}{21}}
+\newlabel{fig:raw_1}{{24a}{21}}
+\newlabel{sub@fig:raw_1}{{a}{21}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 859}}{21}}
+\newlabel{sub@fig:arrow}{{a}{21}}
+\newlabel{fig:raw_1_gaussian}{{24b}{21}}
+\newlabel{sub@fig:raw_1_gaussian}{{b}{21}}
+\newlabel{fig:raw_3}{{24c}{21}}
+\newlabel{sub@fig:raw_3}{{c}{21}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 877}}{21}}
+\newlabel{sub@fig:arrow}{{c}{21}}
+\newlabel{fig:raw_3_gaussian}{{24d}{21}}
+\newlabel{sub@fig:raw_3_gaussian}{{d}{21}}
+\newlabel{fig:raw_4}{{24e}{21}}
+\newlabel{sub@fig:raw_4}{{e}{21}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 896}}{21}}
+\newlabel{sub@fig:arrow}{{e}{21}}
+\newlabel{fig:raw_4_gaussian}{{24f}{21}}
+\newlabel{sub@fig:raw_4_gaussian}{{f}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Results of applying Gaussian filter. \relax }}{21}}
+\newlabel{fig:gaussian_results}{{24}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Sobel Filter Results}{22}}
+\newlabel{fig:raw_1}{{25a}{22}}
+\newlabel{sub@fig:raw_1}{{a}{22}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 930}}{22}}
+\newlabel{sub@fig:arrow}{{a}{22}}
+\newlabel{fig:raw_1_sobel}{{25b}{22}}
+\newlabel{sub@fig:raw_1_sobel}{{b}{22}}
+\newlabel{fig:raw_3}{{25c}{22}}
+\newlabel{sub@fig:raw_3}{{c}{22}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 948}}{22}}
+\newlabel{sub@fig:arrow}{{c}{22}}
+\newlabel{fig:special}{{25d}{22}}
+\newlabel{sub@fig:special}{{d}{22}}
+\newlabel{fig:raw_4}{{25e}{22}}
+\newlabel{sub@fig:raw_4}{{e}{22}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 967}}{22}}
+\newlabel{sub@fig:arrow}{{e}{22}}
+\newlabel{fig:raw_4_sobel}{{25f}{22}}
+\newlabel{sub@fig:raw_4_sobel}{{f}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Results of applying Sobel filter. \relax }}{22}}
+\newlabel{fig:sobel_results}{{25}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Blur Filter Results}{23}}
+\newlabel{fig:raw_1}{{26a}{23}}
+\newlabel{sub@fig:raw_1}{{a}{23}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1000}}{23}}
+\newlabel{sub@fig:arrow}{{a}{23}}
+\newlabel{fig:raw_1_blur}{{26b}{23}}
+\newlabel{sub@fig:raw_1_blur}{{b}{23}}
+\newlabel{fig:raw_3}{{26c}{23}}
+\newlabel{sub@fig:raw_3}{{c}{23}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1018}}{23}}
+\newlabel{sub@fig:arrow}{{c}{23}}
+\newlabel{fig:raw_3_blur}{{26d}{23}}
+\newlabel{sub@fig:raw_3_blur}{{d}{23}}
+\newlabel{fig:raw_4}{{26e}{23}}
+\newlabel{sub@fig:raw_4}{{e}{23}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1037}}{23}}
+\newlabel{sub@fig:arrow}{{e}{23}}
+\newlabel{fig:raw_4_blur}{{26f}{23}}
+\newlabel{sub@fig:raw_4_blur}{{f}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Results of applying Blur filter. \relax }}{23}}
+\newlabel{fig:blur_results}{{26}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Erosion Operation Results}{24}}
+\newlabel{erosion_results}{{4.6}{24}}
+\newlabel{fig:raw_1}{{27a}{24}}
+\newlabel{sub@fig:raw_1}{{a}{24}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1079}}{24}}
+\newlabel{sub@fig:arrow}{{a}{24}}
+\newlabel{fig:raw_1_erosion}{{27b}{24}}
+\newlabel{sub@fig:raw_1_erosion}{{b}{24}}
+\newlabel{fig:raw_3}{{27c}{24}}
+\newlabel{sub@fig:raw_3}{{c}{24}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1097}}{24}}
+\newlabel{sub@fig:arrow}{{c}{24}}
+\newlabel{fig:raw_3_erosion}{{27d}{24}}
+\newlabel{sub@fig:raw_3_erosion}{{d}{24}}
+\newlabel{fig:raw_4}{{27e}{24}}
+\newlabel{sub@fig:raw_4}{{e}{24}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1116}}{24}}
+\newlabel{sub@fig:arrow}{{e}{24}}
+\newlabel{fig:raw_4_erosion}{{27f}{24}}
+\newlabel{sub@fig:raw_4_erosion}{{f}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Results of applying Erosion operation. \relax }}{24}}
+\newlabel{fig:erosion_results}{{27}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Dilation Operation Results}{25}}
+\newlabel{fig:raw_1}{{28a}{25}}
+\newlabel{sub@fig:raw_1}{{a}{25}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1151}}{25}}
+\newlabel{sub@fig:arrow}{{a}{25}}
+\newlabel{fig:raw_1_dilation}{{28b}{25}}
+\newlabel{sub@fig:raw_1_dilation}{{b}{25}}
+\newlabel{fig:raw_3}{{28c}{25}}
+\newlabel{sub@fig:raw_3}{{c}{25}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1169}}{25}}
+\newlabel{sub@fig:arrow}{{c}{25}}
+\newlabel{fig:raw_3_dilation}{{28d}{25}}
+\newlabel{sub@fig:raw_3_dilation}{{d}{25}}
+\newlabel{fig:raw_4}{{28e}{25}}
+\newlabel{sub@fig:raw_4}{{e}{25}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1188}}{25}}
+\newlabel{sub@fig:arrow}{{e}{25}}
+\newlabel{fig:raw_4_dilation}{{28f}{25}}
+\newlabel{sub@fig:raw_4_dilation}{{f}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Results of applying Dilation operation. \relax }}{25}}
+\newlabel{fig:dilation_results}{{28}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Opening Operation Results}{26}}
+\newlabel{fig:raw_1}{{29a}{26}}
+\newlabel{sub@fig:raw_1}{{a}{26}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1220}}{26}}
+\newlabel{sub@fig:arrow}{{a}{26}}
+\newlabel{fig:raw_1_opening}{{29b}{26}}
+\newlabel{sub@fig:raw_1_opening}{{b}{26}}
+\newlabel{fig:raw_3}{{29c}{26}}
+\newlabel{sub@fig:raw_3}{{c}{26}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1238}}{26}}
+\newlabel{sub@fig:arrow}{{c}{26}}
+\newlabel{fig:raw_3_opening}{{29d}{26}}
+\newlabel{sub@fig:raw_3_opening}{{d}{26}}
+\newlabel{fig:raw_4}{{29e}{26}}
+\newlabel{sub@fig:raw_4}{{e}{26}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1257}}{26}}
+\newlabel{sub@fig:arrow}{{e}{26}}
+\newlabel{fig:raw_4_opening}{{29f}{26}}
+\newlabel{sub@fig:raw_4_opening}{{f}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Results of applying Opening operation. \relax }}{26}}
+\newlabel{fig:opening_results}{{29}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Closure Operation Results}{27}}
+\newlabel{fig:raw_1}{{30a}{27}}
+\newlabel{sub@fig:raw_1}{{a}{27}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1290}}{27}}
+\newlabel{sub@fig:arrow}{{a}{27}}
+\newlabel{fig:raw_1_closure}{{30b}{27}}
+\newlabel{sub@fig:raw_1_closure}{{b}{27}}
+\newlabel{fig:raw_3}{{30c}{27}}
+\newlabel{sub@fig:raw_3}{{c}{27}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1308}}{27}}
+\newlabel{sub@fig:arrow}{{c}{27}}
+\newlabel{fig:raw_3_closure}{{30d}{27}}
+\newlabel{sub@fig:raw_3_closure}{{d}{27}}
+\newlabel{fig:raw_4}{{30e}{27}}
+\newlabel{sub@fig:raw_4}{{e}{27}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1327}}{27}}
+\newlabel{sub@fig:arrow}{{e}{27}}
+\newlabel{fig:raw_4_closure}{{30f}{27}}
+\newlabel{sub@fig:raw_4_closure}{{f}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Results of applying Closure operation. \relax }}{27}}
+\newlabel{fig:closure_results}{{30}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Conditional Dilation Results}{28}}
+\newlabel{fig:raw_1}{{31a}{28}}
+\newlabel{sub@fig:raw_1}{{a}{28}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1361}}{28}}
+\newlabel{sub@fig:arrow}{{a}{28}}
+\newlabel{fig:raw_1_closure}{{31b}{28}}
+\newlabel{sub@fig:raw_1_closure}{{b}{28}}
+\newlabel{fig:raw_3}{{31c}{28}}
+\newlabel{sub@fig:raw_3}{{c}{28}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1379}}{28}}
+\newlabel{sub@fig:arrow}{{c}{28}}
+\newlabel{fig:raw_3_closure}{{31d}{28}}
+\newlabel{sub@fig:raw_3_closure}{{d}{28}}
+\newlabel{fig:raw_4}{{31e}{28}}
+\newlabel{sub@fig:raw_4}{{e}{28}}
+\newlabel{fig:arrow}{{\caption@xref {fig:arrow}{ on input line 1398}}{28}}
+\newlabel{sub@fig:arrow}{{e}{28}}
+\newlabel{fig:raw_4_closure}{{31f}{28}}
+\newlabel{sub@fig:raw_4_closure}{{f}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Results of applying Conditional Dilation. \relax }}{28}}
+\newlabel{fig:closure_results}{{31}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Pupil Extraction Results}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Pupil diameter/center extraction algorithm flow.\relax }}{29}}
+\newlabel{fig:algo_flow}{{32}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Pupil diameter and center extraction from experimental data.\relax }}{29}}
+\newlabel{fig:results_1}{{33}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Pupil diameter and center extraction from experimental data.\relax }}{30}}
+\newlabel{fig:results_2}{{34}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Pupil diameter and center extraction from experimental data.\relax }}{30}}
+\newlabel{fig:results_3}{{35}{30}}
 \bibcite{convolution_wolphram}{1}
 \bibcite{convolution_wiki}{2}
 \bibcite{convolution_equations}{3}
@@ -83,3 +327,4 @@
 \bibcite{morphological}{8}
 \bibcite{matlab}{9}
 \bibcite{slajdy_morph}{10}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}Conclusions}{31}}

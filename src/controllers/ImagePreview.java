@@ -12,20 +12,65 @@ import java.util.Date;
 //     >> BIOMETRIC TASK SOLUTION:
 //        applyGrayScale();
 //        applyBlur();
-//        applyTreshold(8);
+//        applyTreshold(10);
 //        applySobelFilter();
 
 public class ImagePreview extends ImageView {
-    private final static String DEFAULT_IMAGE_URL = "face_2.jpg";
+    private final static String ORIGINAL_IMAGE_URL = "raw_data_1.jpg";
+    private final static String DEFAULT_IMAGE_URL = "raw_data_1.jpg";
     Image image = null;
+    Image originalImage = null;
 
     public ImagePreview() {
         loadDefaultImage();
-        applyFaceDetection();
+        applyGrayScale();
+
+        applyTreshold(10);
+        applyDilation();
+    }
+
+    private void applyFindPupilDiameter() {
+        try {
+            FindPupilDiameter findPupilDiameter = new FindPupilDiameter(image, new Image(ORIGINAL_IMAGE_URL, false));
+            image = findPupilDiameter.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void applyConditionalDilation() {
+        try {
+            ConditionalDilation conditionalDilation = new ConditionalDilation(image);
+            image = conditionalDilation.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void applyErosion() {
+        try {
+            Erosion erosion = new Erosion(image);
+            image = erosion.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void applyDilation() {
+        try {
+            Dilation dilation = new Dilation(image);
+            image = dilation.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void applyFaceDetection() {
-        if(image != null) {
+        if (image != null) {
             FaceDetection faceDetection = new FaceDetection(image);
             image = faceDetection.apply();
             setImage(image);
@@ -33,15 +78,15 @@ public class ImagePreview extends ImageView {
     }
 
     private void applyBlur() {
-        if(image != null) {
-            Blur blur = new Blur(image, 5);
+        if (image != null) {
+            Blur blur = new Blur(image, 7);
             image = blur.apply();
             setImage(image);
         }
     }
 
     private void applySobelFilter() {
-        if(image != null) {
+        if (image != null) {
             SobelFilter sobelFilter = new SobelFilter(image);
             image = sobelFilter.apply();
             setImage(image);
@@ -49,7 +94,7 @@ public class ImagePreview extends ImageView {
     }
 
     private void applyGaussianFilter() {
-        if(image != null) {
+        if (image != null) {
             GaussianFilter gaussianFilter = new GaussianFilter(image);
             image = gaussianFilter.apply();
             setImage(image);
@@ -57,7 +102,7 @@ public class ImagePreview extends ImageView {
     }
 
     private void applyLowPassFilter() {
-        if(image != null) {
+        if (image != null) {
             LowPassFilter lowPassFilter = new LowPassFilter(image);
             image = lowPassFilter.apply();
             setImage(image);
@@ -69,15 +114,6 @@ public class ImagePreview extends ImageView {
             HighPassFilter highPassFilter = new HighPassFilter(image);
             image = highPassFilter.apply();
             setImage(image);
-        }
-    }
-
-    public void saveCurrentPictureToFile() {
-        String out = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss''").format(new Date());
-        File file = new File(out + ".png");
-        try {
-            ImageIO.write(SwingFXUtils.fromFXImage(getImage(), null), "png", file);
-        } catch (Exception s) {
         }
     }
 
@@ -145,6 +181,7 @@ public class ImagePreview extends ImageView {
     private void loadDefaultImage() {
         image = new Image(DEFAULT_IMAGE_URL, false);
         setImage(image);
+        originalImage = image;
     }
 
 }

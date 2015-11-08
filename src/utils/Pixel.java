@@ -112,4 +112,20 @@ public class Pixel {
         setG(green);
         setB(blue);
     }
+
+    public void addValuesToChannels(double addToRed, double addToGreen, double addToBlue) {
+        r += addToRed;
+        g += addToGreen;
+        b += addToBlue;
+    }
+
+    public void divideAllChannelsBy(double divisor) {
+        r /= divisor;
+        g /= divisor;
+        b /= divisor;
+    }
+
+    public void addColorChannelsToPixelChannels(Color color) {
+        addValuesToChannels(color.getRed(), color.getGreen(), color.getBlue());
+    }
 }
