@@ -17,16 +17,25 @@ import java.util.Date;
 
 public class ImagePreview extends ImageView {
     private final static String ORIGINAL_IMAGE_URL = "raw_data_1.jpg";
-    private final static String DEFAULT_IMAGE_URL = "raw_data_1.jpg";
+    private final static String DEFAULT_IMAGE_URL = "r1.bmp";
     Image image = null;
     Image originalImage = null;
 
     public ImagePreview() {
         loadDefaultImage();
-        applyGrayScale();
+        applyHistogramNormalization();
+        applyTreshold(90);
+        applyKMM();
+    }
 
-        applyTreshold(10);
-        applyDilation();
+    private void applyKMM() {
+        try {
+            KMM kmm = new KMM(image);
+            image = kmm.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void applyFindPupilDiameter() {

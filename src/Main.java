@@ -33,10 +33,10 @@ public class Main extends Application {
         button.setOnAction((event) -> {
             SaveImageToFile.saveCurrentPictureToFile(imagePreview.getImage(), "");
         });
-        VBox vbox = new VBox( button /*button2*/);
+        VBox vbox = new VBox( button /*button2*/, slider);
 
         root.getChildren().addAll(imagePreview, vbox);
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 800, 600);
         imagePreview.fitWidthProperty().bind(scene.widthProperty());
         imagePreview.fitHeightProperty().bind(scene.heightProperty());
         imagePreview.setPreserveRatio(true);
@@ -54,7 +54,7 @@ public class Main extends Application {
         slider.setMax(1.0);
 
         slider.valueProperty().addListener((a,b,c) -> {
-            imagePreview.applyTreshold(slider.getValue());
+            imagePreview.applyTreshold(255.0 * slider.getValue());
             System.out.println("slider val: " + slider.getValue());
         });
     }
