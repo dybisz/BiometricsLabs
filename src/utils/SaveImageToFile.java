@@ -14,7 +14,7 @@ import java.util.Date;
 public class SaveImageToFile {
     public static void saveCurrentPictureToFile(Image image, String name) {
         String out = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss''").format(new Date());
-        File file = new File("outputdata/" + name + out + ".png");
+        File file = new File(name + out + ".png");
         try {
             ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
         } catch (Exception s) {

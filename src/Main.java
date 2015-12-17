@@ -33,7 +33,7 @@ public class Main extends Application {
         button.setOnAction((event) -> {
             SaveImageToFile.saveCurrentPictureToFile(imagePreview.getImage(), "");
         });
-        VBox vbox = new VBox( button /*button2*/, slider);
+        VBox vbox = new VBox( button /*button2*//*, slider*/);
 
         root.getChildren().addAll(imagePreview, vbox);
         Scene scene = new Scene(root, 800, 600);

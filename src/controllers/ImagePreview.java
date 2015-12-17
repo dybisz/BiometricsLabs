@@ -1,13 +1,7 @@
 package controllers;
 
 import filters.*;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.*;
-
-import javax.imageio.ImageIO;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 //     >> BIOMETRIC TASK SOLUTION:
 //        applyGrayScale();
@@ -23,9 +17,20 @@ public class ImagePreview extends ImageView {
 
     public ImagePreview() {
         loadDefaultImage();
-        applyHistogramNormalization();
+//        applyHistogramNormalization();
+        applyGrayScale();
         applyTreshold(90);
-        applyKMM();
+        applyK3M();
+    }
+
+    private void applyK3M() {
+        try {
+            K3M kmm = new K3M(image);
+            image = kmm.apply();
+            setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void applyKMM() {

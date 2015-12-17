@@ -79,9 +79,9 @@ public class Tresholding extends Filter {
         double inputSaturation = inputColor.getRed();
 
         if (saturationAboveTreshold(inputSaturation)) {
-            outputColor = new Color(0, 0, 0, inputOpacity);
-        } else {
             outputColor = new Color(1, 1, 1, inputOpacity);
+        } else {
+            outputColor = new Color(0, 0, 0, inputOpacity);
         }
         return outputColor;
     }
